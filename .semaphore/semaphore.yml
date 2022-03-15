@@ -13,3 +13,4 @@ blocks:
             - checkout
             - pip install pytest
             - apt install python-pytest
+            - ps aux | grep -i apt
