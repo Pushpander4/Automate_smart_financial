@@ -11,11 +11,9 @@ blocks:
         - name: Test
           commands:
             - checkout
-            - cache restore
             - sudo apt-get update
             - sudo apt-get install python3-pytest -y
             - pip3 install selenium
             - pip3 install pytest
             - pip3 install webdriver-manager
-            - cache store
             - pytest-3
