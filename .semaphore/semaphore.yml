@@ -11,6 +11,7 @@ blocks:
         - name: Test
           commands:
             - checkout
+            - from selenium import webdriver
             - pip install pytest
             - sudo apt install python-pytest -y
-            - 'py.test '
+            - 'pytest '
