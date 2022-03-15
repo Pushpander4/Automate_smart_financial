@@ -13,7 +13,5 @@ blocks:
             - checkout
             - sudo apt-get update
             - sudo apt-get install python-pytest -y
-            - sudo rm /var/lib/dpkg/lock-frontend
-            - sudo dpkg --configure -a
-            - sudo apt update
+            - pip install selenium
             - pytest
