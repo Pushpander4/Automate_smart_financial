@@ -12,4 +12,4 @@ blocks:
           commands:
             - checkout
             - sudo apt-get update
-            - sudo apt-get install python-pytest
+            - sudo apt-get install python-pytest -y
