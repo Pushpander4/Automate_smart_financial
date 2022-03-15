@@ -1,0 +1,21 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: Test
+          commands:
+            - checkout
+            - cache restore
+            - sudo apt-get update
+            - sudo apt-get install python3-pytest -y
+            - pip3 install selenium
+            - pip3 install pytest
+            - pip3 install webdriver-manager
+            - cache store
+            - pytest-3
