@@ -13,3 +13,4 @@ blocks:
             - checkout
             - pip install pytest
             - sudo apt-get install -y python-pytest
+            - pytest
