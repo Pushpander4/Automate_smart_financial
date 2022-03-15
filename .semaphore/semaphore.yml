@@ -12,6 +12,4 @@ blocks:
           commands:
             - checkout
             - pip install pytest
-            - mkdir pytest_project
-            - cd pytest_project
-            - apt install python3.8-venv
+            - pytest
