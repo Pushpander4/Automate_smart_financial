@@ -17,5 +17,5 @@ blocks:
             - pip3 install selenium
             - pip3 install pytest
             - cache store
-            - pip --version
+            - pip2 --version
             - pytest
