@@ -15,5 +15,6 @@ blocks:
             - sudo apt-get update
             - sudo apt-get install python3-pytest -y
             - pip3 install selenium
+            - pip3 install pytest
             - cache store
             - pytest
