@@ -10,13 +10,5 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - checkout
             - pip install pytest
-            - sudo apt install python-pytest -y
             - 'pytest '
-      prologue:
-        commands:
-          - checkout
-          - pip install pytest
-          - sudo apt install python-pytest -y
-          - 'pytest '
