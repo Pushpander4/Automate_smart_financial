@@ -12,5 +12,6 @@ blocks:
           commands:
             - checkout
             - pip install pytest
-            - sudo apt-get install -y python-pytest
-            - pytest
+            - mkdir pytest_project
+            - cd pytest_project
+            - python3 -m venv pytest-env
