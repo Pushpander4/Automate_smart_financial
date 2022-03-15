@@ -12,4 +12,4 @@ blocks:
           commands:
             - checkout
             - pip install pytest
-            - pytest
+            - apt install python-pytest
