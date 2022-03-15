@@ -11,3 +11,4 @@ blocks:
         - name: Test
           commands:
             - checkout
+            - pytest
