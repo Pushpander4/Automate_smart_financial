@@ -11,4 +11,5 @@ blocks:
         - name: Test
           commands:
             - pip install pytest
+            - apt install python-pytest
             - 'pytest '
