@@ -12,6 +12,7 @@ blocks:
           commands:
             - checkout
             - sudo apt-get update
-            - sudo apt-get install python-pytest -y
-            - pip install selenium
+            - sudo apt-get install python3-pytest -y
+            - pip3 install selenium
+            - which pytest
             - pytest
