@@ -17,7 +17,4 @@ blocks:
             - pip3 install selenium
             - pip3 install pytest
             - cache store
-            - sudo apt-get install mlocate
-            - sudo updatedb
-            - sudo locate pytest
-            - pytest
+            - pytest-3
