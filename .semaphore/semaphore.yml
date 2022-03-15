@@ -11,5 +11,6 @@ blocks:
         - name: Test
           commands:
             - checkout
-            - pip install pytest
+            - sudo apt update
+            - 'sudo apt install python-pytest '
             - pytest
