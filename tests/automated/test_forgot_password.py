@@ -1,4 +1,4 @@
-import funtion
+from automated import funtion
 from selenium.webdriver.common.by import By
 
 
@@ -8,8 +8,8 @@ def testtext_of_forgot_password():
     assert (text_of_sign_in_with == "Forgot your password?")
 
 
-def testclick_forgot_password():
-    funtion.driver.find_element(By.XPATH,"//a[normalize-space()='Forgot your password?']").click()
+# def testclick_forgot_password():
+#     funtion.driver.find_element(By.XPATH,"//a[normalize-space()='Forgot your password?']").click()
 
 def testIn_forgot_password_email():
     text_of_email = funtion.driver.find_element(By.XPATH,"//label[normalize-space()='Email']").text
@@ -25,10 +25,10 @@ def testIn_email_place_holder():
     funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys("sheerin@example.com")
 
 
-def testtext_on_reset_button():
-    text_on_reset_button = funtion.driver.find_element(By.XPATH,"//button[normalize-space()='Reset']").text
-    assert (text_on_reset_button == "Reset")
-    funtion.driver.find_element(By.XPATH,"//button[normalize-space()='Reset']").click()
+# def testtext_on_reset_button():
+#     text_on_reset_button = funtion.driver.find_element(By.XPATH,"//button[normalize-space()='Reset']").text
+#     assert (text_on_reset_button == "Reset")
+#     funtion.driver.find_element(By.XPATH,"//button[normalize-space()='Reset']").click()
 
 # def testReset_link_text():
 #     text_on_Reset_link_text = funtion.driver.find_element(By.XPATH,"//div[@role='alert']").text

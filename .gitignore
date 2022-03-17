@@ -1,0 +1,5 @@
+.idea/
+### Python (automated tests) ###
+__pycache__/
+*.py[cod]
+*$py.class
