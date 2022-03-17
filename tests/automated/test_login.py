@@ -1,7 +1,5 @@
 import time
-
 from automated import funtion
-import time
 from selenium.webdriver.common.by import By
 
 funtion.open_browser()
@@ -33,7 +31,8 @@ def testremember_me():
     v1 = funtion.driver.find_element(By.XPATH, "//input[@id='customControlInline']").is_selected()
     assert (v1 == True)
 
+time.sleep(4)
 
 def testlogin():
-    time.sleep(10)
+    time.sleep(4)
     funtion.login()
