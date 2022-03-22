@@ -31,6 +31,9 @@ def testremember_me():
     v1 = funtion.driver.find_element(By.XPATH, "//input[@id='customControlInline']").is_selected()
     assert (v1 == True)
 
+
+
+
 time.sleep(4)
 
 def testlogin():
