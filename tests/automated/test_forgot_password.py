@@ -37,6 +37,7 @@ def test_click_on_reset_button():
 
 
 
+
 # def testReset_link_text():
 #     text_on_Reset_link_text = funtion.driver.find_element(By.XPATH,"//div[@role='alert']").text
 #     assert (text_on_Reset_link_text == "Reset link are sended to your mailbox, check there first")
