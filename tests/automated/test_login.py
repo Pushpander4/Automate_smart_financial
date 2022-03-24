@@ -5,13 +5,7 @@ from selenium.webdriver.common.by import By
 funtion.open_browser()
 
 
-def testWelcometext():
-    welcome_back_text=funtion.driver.find_element(By.XPATH ,"//h5[normalize-space()='Welcome Back !']").text
-    assert ( welcome_back_text == "Welcome Back !")
-
-def testSign_in_to_continue_to_Smart_Financial():
-    text_sign_in_ign_in_to_continue_to_Smart_Financial = funtion.driver.find_element(By.XPATH ,"//p[normalize-space()='Sign in to continue to Smart Financial']").text
-    assert (text_sign_in_ign_in_to_continue_to_Smart_Financial == "Sign in to continue to Smart Financial")
+# TODO: add a test for checking smartfinancial title image 
 
 def testemail():
     text_email = funtion.driver.find_element(By.XPATH,"//label[normalize-space()='Email']").text
