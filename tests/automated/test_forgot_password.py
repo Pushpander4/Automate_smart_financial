@@ -6,19 +6,25 @@ funtion.open_browser()
 
 def testtext_of_forgot_password():
     text_of_sign_in_with = funtion.driver.find_element(By.XPATH,"//a[normalize-space()='Forgot your password?']").text
-    assert (text_of_sign_in_with == "Forgot your password?")
+    assert text_of_sign_in_with == "Forgot your password?", 'TEST-13 "Forgot your password?" should be present'
 
+def test_Forgot_password_enable():
+    funtion.driver.find_element(By.XPATH,"//a[normalize-space()='Forgot your password?']").is_enabled()
 
-def testclick_forgot_password():
+def test_Click_forgot_password():
     funtion.driver.find_element(By.XPATH,"//a[normalize-space()='Forgot your password?']").click()
 
 def testIn_forgot_password_email():
     text_of_email = funtion.driver.find_element(By.XPATH,"//label[normalize-space()='Email']").text
     assert (text_of_email == "Email")
 
-def testtext_2022_Smart_Financial():
-    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 Smart Financial']").text
-    assert (t_2022_Smart_Financial == "© 2022 Smart Financial")
+def test_text_2022_Smart_Financial():
+    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
+    assert (t_2022_Smart_Financial == "© 2022 SmartFinancial")
+
+def testIn_email_enable():
+    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").is_enabled()
+
 
 def testIn_email_place_holder():
     place_holder_on_email_place_holder = funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").get_attribute("placeholder")
@@ -31,6 +37,9 @@ def test_enter_the_email_for_reseting_of_password():
 def testtext_on_reset_button():
     text_on_reset_button = funtion.driver.find_element(By.XPATH,"//button[normalize-space()='Reset']").text
     assert (text_on_reset_button == "Reset")
+
+def test_click_on_reset_button_enble():
+    funtion.driver.find_element(By.XPATH,"//button[normalize-space()='Reset']").is_enabled()
 
 def test_click_on_reset_button():
     funtion.driver.find_element(By.XPATH,"//button[normalize-space()='Reset']").click()

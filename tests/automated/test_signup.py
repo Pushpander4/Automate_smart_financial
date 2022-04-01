@@ -3,22 +3,20 @@ from selenium.webdriver.common.by import By
 
 
 funtion.open_browser()
+def test_signup_enable_or_not():
+    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").is_enabled()
 
-def test_signup():
+
+def test_signup_text():
     text_on_signup = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").text
     assert (text_on_signup == "Signup now")
+
 
 def testClick_signup():
         funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
 
-def testFree_Register():
-    Free_Register_text=funtion.driver.find_element(By.XPATH ,"//h5[normalize-space()='Free Register']").text
-    assert ( Free_Register_text == "Free Register")
-
-def test_Get_your_free_Smart_Financial_account_now():
-    text_Get_your_free_Smart_Financial_account_now = funtion.driver.find_element(By.XPATH ,"//p[normalize-space()='Get your free Smart Financial account now.']").text
-    assert (text_Get_your_free_Smart_Financial_account_now == "Get your free Smart Financial account now.")
-
+def testEnter_name_enable():
+    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Full Name']").is_enabled()
 
 
 def testEnter_full_name():
@@ -31,7 +29,8 @@ def testEnter_full_name_holder():
     Enter_full_name_holder = funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Full Name']").get_attribute("placeholder")
     assert (Enter_full_name_holder == "Enter Full Name")
 
-
+def testEnter_company_name_enable():
+    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Company Name']").is_enabled()
 
 def testEnter_company_name_holder():
     Enter_company_name_holder = funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Company Name']").get_attribute("placeholder")
@@ -41,6 +40,9 @@ def testEnter_company_name():
     Enter_company_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Company Name']").text
     assert (Enter_company_name == "Company Name")
 
+
+def testEnter_email_place_enable():
+    funtion.driver.find_element(By.XPATH, "//input[@id='email']").is_enabled()
 
 
 def testEnter_email_place_holder():
@@ -52,6 +54,8 @@ def testEnter_email_place():
     Enter_email_place = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Email']").text
     assert (Enter_email_place == "Email")
 
+def test_Enter_Password_enable():
+    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").is_enabled()
 
 
 def testplace_holder_Enter_Password():
@@ -66,10 +70,11 @@ def test_text_on_button_register():
     text_on_button_register = funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").text
     assert (text_on_button_register == "Register")
 
+def test_click_button_register_enable():
+    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").is_enabled()
+
 def test_click_button_register():
     funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
-
-
 
 def test_text_by_registering_you_agree_to_the():
     text_by_registering_you_agree_to_the = funtion.driver.find_element(By.XPATH, "//p[@class='mb-0']").text
@@ -79,6 +84,9 @@ def test_text_by_registering_you_agree_to_the():
 def test_text_click_terms_of_use():
     text_click_terms_of_use = funtion.driver.find_element(By.XPATH,"//a[normalize-space()='Terms of Use']").text
     assert (text_click_terms_of_use == "Terms of Use")
+
+def test_terms_of_use_enable():
+    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").is_enabled()
 
 def test_click_terms_of_use():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").click()
@@ -92,26 +100,22 @@ def testbacktologin():
     text_on_login_back = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
     assert (text_on_login_back == "Login")
 
+def test_login_button_to_go_back_to_login_page_enable():
+    funtion.driver.find_element(By.XPATH,"//a[normalize-space()='Login']").is_enabled()
+
 def test_click_on_login_button_to_go_back_to_login_page():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").click()
 
 def testtext_2022_Smart_Financial():
-    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 Smart Financial']").text
-    assert (t_2022_Smart_Financial == "© 2022 Smart Financial")
-
-
-
-
-
-
-
-
+    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
+    assert (t_2022_Smart_Financial == "© 2022 SmartFinancial")
 
 def testbacktologin():
     text_on_login_back = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
     assert (text_on_login_back == "Login")
 
-def test_click_on_login_button_to_go_back_to_login_page():
-    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").click()
+
+
+
 
 

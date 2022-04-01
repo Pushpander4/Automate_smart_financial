@@ -1,5 +1,6 @@
 
 from automated import funtion 
 
-def testopen_browser():
+def test_T1_open_browser():
     funtion.open_browser()
+
