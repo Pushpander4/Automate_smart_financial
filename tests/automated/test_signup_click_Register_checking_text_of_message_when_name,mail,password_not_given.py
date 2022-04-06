@@ -8,14 +8,15 @@ funtion.open_browser()
 
 def testClick_signup():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
+    time.sleep(2)
 
 def test_click_button_register():
     funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
+    time.sleep(2)
 
-def test_please_enter_your_username():
-     name_alert = funtion.driver.find_element(By.XPATH,"//div[normalize-space()='Please Enter Your Username']").text
-     assert (name_alert == 'Please Enter Your Username')
-
+def test_please_enter_your_firstrname():
+     name_alert = funtion.driver.find_element(By.XPATH,"//div[normalize-space()='Please Enter First Name']").text
+     assert (name_alert == 'Please Enter First Name')
 
 
 def test_please_enter_your_email():
