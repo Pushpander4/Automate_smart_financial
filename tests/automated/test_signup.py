@@ -30,7 +30,7 @@ def testEnter_first_name():
 
 
 def testEnter_Last_name_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='lastname']").is_enabled()
+    funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").is_enabled()
 
 
 def testEnter_last_name():
@@ -100,7 +100,7 @@ def testEnter_state():
 
 
 def testEnter_zipcode_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='zipcode']").is_enabled()
+    funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").is_enabled()
 
 
 def testEnter_zipcode():
