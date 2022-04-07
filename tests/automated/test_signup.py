@@ -1,4 +1,6 @@
-from selenium.webdriver.support.ui import Select
+#from selenium.webdriver.support.ui import Select
+import time
+
 from automated import funtion
 from selenium.webdriver.common.by import By
 
@@ -16,6 +18,7 @@ def test_signup_text():
 
 def testClick_signup():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
+    time.sleep(5)
 
 
 def testEnter_first_name_enable():
@@ -53,7 +56,7 @@ def testEnter_phone_number():
 
 def testEnter_timezone_enable():
 
-    element = funtion.driver.find_element(By.CLASS_NAME, "css-8mmkcg").is_enabled()
+     funtion.driver.find_element(By.CLASS_NAME, "css-8mmkcg").is_enabled()
     #drp = Select(element)
     # count the number of options
     #print(len(element))
@@ -78,23 +81,23 @@ def testEnter_Address():
 
 
 def testEnter_city_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='city']").is_enabled()
+    funtion.driver.find_element(By.ID, "react-select-3-input").is_enabled()
 
 
-def testEnter_city():
-    Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='City']").text
-    assert (Enter_last_name == "City")
+def testEnter_city_text():
+    city_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='City']").text
+    assert (city_text == "City")
     # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
     # print(text_name)
 
 
 def testEnter_state_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='state']").is_enabled()
+    funtion.driver.find_element(By.ID, "react-select-4-input").is_enabled()
 
 
-def testEnter_state():
-    Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='State']").text
-    assert (Enter_last_name == "State")
+def testEnter_state_text():
+    state_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='State']").text
+    assert (state_text == "State")
     # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
     # print(text_name)
 

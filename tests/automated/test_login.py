@@ -24,7 +24,7 @@ def test_T4_password_text():
     assert (text_password == "Password") , 'TEST-LOGIN-1 "Passsword" text should be present'
 
 def test_remember_me_text():
-    text_on_remember = funtion.driver.find_element(By.XPATH,"//label[normalize-space()='Remember me']").text
+    text_on_remember = funtion.driver.find_element(By.XPATH,"//label[@for='customControlInline']").text
     assert (text_on_remember == "Remember me")
 
 def testtext_2022_Smart_Financial():
@@ -39,10 +39,12 @@ def testremember_me():
 
 def test_login():
     funtion.driver.find_element(By.XPATH,
-                                "//input[@placeholder='Enter email' and @aria-invalid='false']").send_keys(
+                                "//input[@placeholder='Enter email']").send_keys(
         "piyush@ikshalabs.com")
     funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Piyush@008")
     time.sleep(5)
-    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Log In']").click()
+    funtion.driver.find_element(By.XPATH, "//button[@type='submit']").click()
+
+
 
 
