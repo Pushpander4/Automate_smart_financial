@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 
 funtion.open_browser()
 
+
 def test_text_of_forgot_password():
     text_of_sign_in_with = funtion.driver.find_element(By.XPATH,"//a[@class='text-muted']").text
     assert (text_of_sign_in_with == "Forgot your password?"), 'TEST-13 "Forgot your password?" should be present'

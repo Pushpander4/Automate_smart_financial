@@ -27,10 +27,10 @@ def test_remember_me_text():
     text_on_remember = funtion.driver.find_element(By.XPATH,"//label[@for='customControlInline']").text
     assert (text_on_remember == "Remember me")
 
-def testtext_2022_Smart_Financial():
+def test_text_2022_Smart_Financial():
     t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
     assert (t_2022_Smart_Financial == "© 2022 SmartFinancial")
-def testremember_me():
+def test_remember_me():
     funtion.driver.find_element(By.XPATH, "//input[@id='customControlInline']").is_enabled()
     funtion.driver.find_element(By.XPATH, "//input[@id='customControlInline']").click()
     v1 = funtion.driver.find_element(By.XPATH, "//input[@id='customControlInline']").is_selected()
@@ -38,12 +38,25 @@ def testremember_me():
     time.sleep(4)
 
 def test_login():
-    funtion.driver.find_element(By.XPATH,
-                                "//input[@placeholder='Enter email']").send_keys(
-        "piyush@ikshalabs.com")
-    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Piyush@008")
+    funtion.driver.find_element(By.XPATH,"//input[@placeholder='Enter email']").send_keys("piyush@ikshalabs.com")
+    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Piyush@123")
     time.sleep(5)
+
+def test_login_button_text():
+    text_on_login_button = funtion.driver.find_element(By.XPATH,"//button[@type='submit']").text
+    assert (text_on_login_button == "Log In")
+
+
+
+def test_login_button():
     funtion.driver.find_element(By.XPATH, "//button[@type='submit']").click()
+
+
+
+def test_able_to_login():
+    time.sleep(20)
+    profile_page_url= (funtion.driver.current_url)
+    assert (profile_page_url == "https://xenodochial-stonebraker-d239bd.netlify.app/profile")
 
 
 
