@@ -7,6 +7,11 @@ funtion.open_browser()
 
 # TODO: add a test for checking smartfinancial title image
 
+def test_smart_financial_title_image():
+    funtion.driver.find_element(By.CLASS_NAME,"/text-center p-4").is_enabled()
+
+
+
 def test_T1_email_input_field():
     funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").is_enabled()
 

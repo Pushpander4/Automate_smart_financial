@@ -87,24 +87,11 @@ def testEnter_city_enable():
 def testEnter_city_text():
     city_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='City']").text
     assert (city_text == "City")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
-
-
-def testEnter_state_enable():
-    funtion.driver.find_element(By.ID, "react-select-4-input").is_enabled()
-
-
 def testEnter_state_text():
     state_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='State']").text
     assert (state_text == "State")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
-
-
 def testEnter_zipcode_enable():
     funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").is_enabled()
-
 
 def testEnter_zipcode():
     Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Zip Code']").text
@@ -117,10 +104,9 @@ def testEnter_email_place_enable():
     funtion.driver.find_element(By.XPATH, "//input[@id='email']").is_enabled()
 
 
-def testEnter_email_place_holder():
-    Enter_email_place_holder = funtion.driver.find_element(By.XPATH, "//input[@id='email']").get_attribute(
-        "placeholder")
-    assert (Enter_email_place_holder == "Enter email")
+# def testEnter_email_place_holder():
+#     Enter_email_place_holder = funtion.driver.find_element(By.XPATH, "//input[@id='email']").get_attribute("placeholder")
+#     assert (Enter_email_place_holder == "Enter email")
 
 
 def testEnter_email_place():
@@ -129,14 +115,12 @@ def testEnter_email_place():
 
 
 def test_Enter_Password_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").is_enabled()
+    funtion.driver.find_element(By.XPATH, "//input[@name='password']").is_enabled()
 
 
-def testplace_holder_Enter_Password():
-    place_holder_Enter_Password = funtion.driver.find_element(By.XPATH,
-                                                              "//input[@placeholder='Enter Password']").get_attribute(
-        "placeholder")
-    assert (place_holder_Enter_Password == "Enter Password")
+# def testplace_holder_Enter_Password():
+#     place_holder_Enter_Password = funtion.driver.find_element(By.XPATH,"//input[@placeholder='Enter Password']").get_attribute("placeholder")
+#     assert (place_holder_Enter_Password == "Enter Password")
 
 
 def testEnter_Password():
@@ -177,31 +161,23 @@ def test_click_terms_of_use():
 
 
 def test_already_have_an_account():
-    t_already_have_an_account = funtion.driver.find_element(By.CSS_SELECTOR,
-                                                            "div[class='mt-5 text-center'] p:nth-child(1)").text
-    print(t_already_have_an_account)
+    t_already_have_an_account = funtion.driver.find_element(By.CSS_SELECTOR,"div[class='mt-5 text-center'] p:nth-child(1)").text
     assert (t_already_have_an_account == "Already have an account ? Login")
-
-
 def testbacktologin():
     text_on_login_back = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
     assert (text_on_login_back == "Login")
-
-
 def test_login_button_to_go_back_to_login_page_enable():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").is_enabled()
 
-
-def test_click_on_login_button_to_go_back_to_login_page():
-    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").click()
-
-
 def testtext_2022_Smart_Financial():
-    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,
-                                                         "//p[normalize-space()='© 2022 SmartFinancial']").text
+    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
     assert (t_2022_Smart_Financial == "© 2022 SmartFinancial")
 
 
 def testbacktologin():
     text_on_login_back = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
     assert (text_on_login_back == "Login")
+
+def test_click_on_login_button_to_go_back_to_login_page():
+    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").click()
+

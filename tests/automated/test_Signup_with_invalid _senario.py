@@ -1,8 +1,6 @@
 import time
 
 from automated import funtion
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 
@@ -46,25 +44,80 @@ def test_Please_enter_your_password():
 
 
 
-
 #try to  signup with already taken email
-
-#function.driver.back()
-
-def test_click_signup():
-    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
-    time.sleep(2)
-
+#working
 def test_enter_signup_details():
+    funtion.driver.refresh()
     funtion.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
     funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys("XYZ")
     funtion.driver.find_element(By.XPATH, "//input[@name='phone']").send_keys("2345672347")
     funtion.driver.find_element(By.XPATH, "//input[@name='address']").send_keys("fgdwbhgbgibgibgjgjdjgad djgndgijjndgjsdn")
     funtion.driver.find_element(By.XPATH, "//input[@name='city']").send_keys("Delhi")
+    funtion.driver.find_element(By.XPATH,"//div[@class='col-xl-6']//div[@class='select2-selection__control css-yk16xz-control']").click()
+    funtion.driver.find_element(By.ID, "react-select-2-option-0-5").click()
+    time.sleep(6)
+    funtion.driver.find_element(By.XPATH,"//div[@class='col-xl-3']//div[@class='select2-selection__value-container select2-selection__value-container--has-value css-1hwfws3']").click()
+    funtion.driver.find_element(By.ID,"react-select-3-option-0-1").click()
+    funtion.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12345")
     funtion.driver.find_element(By.XPATH, "//input[@id='email']").send_keys("piyush@ikshalabs.com")
     funtion.driver.find_element(By.XPATH, "//input[@name='password']").send_keys("Abcderfgh1@")
     funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
 
+def test_email_has_already_been_take():
+    email_has_already_been_take = funtion.driver.find_element(By.XPATH,"//div[@role = 'alert']").text
+    assert (email_has_already_been_take == 'email has already been taken')
 
-    time.sleep(5)
+
+
+#user should not able to sign up with invalid email ID
+#working
+def test_user_should_not_able_to_log_in_with_in_valid_email():
+    funtion.driver.refresh()
+    funtion.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
+    funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys("XYZ")
+    funtion.driver.find_element(By.XPATH, "//input[@name='phone']").send_keys("2345672347")
+    funtion.driver.find_element(By.XPATH, "//input[@name='address']").send_keys("fgdwbhgbgibgibgjgjdjgad djgndgijjndgjsdn")
+    funtion.driver.find_element(By.XPATH, "//input[@name='city']").send_keys("Delhi")
+    funtion.driver.find_element(By.XPATH,"//div[@class='col-xl-6']//div[@class='select2-selection__control css-yk16xz-control']").click()
+    funtion.driver.find_element(By.ID, "react-select-2-option-0-5").click()
+    time.sleep(6)
+    funtion.driver.find_element(By.XPATH,"//div[@class='col-xl-3']//div[@class='select2-selection__value-container select2-selection__value-container--has-value css-1hwfws3']").click()
+    funtion.driver.find_element(By.ID, "react-select-3-option-0-1").click()
+    funtion.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12345")
+    funtion.driver.find_element(By.XPATH, "//input[@id='email']").send_keys("piyushikshalabs.com")
+
+    funtion.driver.find_element(By.XPATH, "//input[@name='password']").send_keys("Abcderfgh1@")
+    email_must_be_a_valid_email = funtion.driver.find_element(By.XPATH,"//div[normalize-space()='email must be a valid email']").text
+    assert (email_must_be_a_valid_email == 'email must be a valid email')
+
+#warning in first name and last name for more then 2 char and in address 3 char.
+#first_name_must_be_at_least_2_characters
+def test_first_name_and_last_name_for_more_then_2_har_and_in_address_3_char():
+    funtion.driver.refresh()
+    funtion.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("A")
+    funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys("X")
+    funtion.driver.find_element(By.XPATH, "//input[@name='address']").send_keys("fg")
+def test_first_name_must_be_at_least_2_characters():
+    first_name_must_be_at_least_2_characters = funtion.driver.find_element(By.XPATH,"//div[normalize-space()='first_name must be at least 2 characters']").text
+    assert (first_name_must_be_at_least_2_characters == 'first_name must be at least 2 characters')
+
+def test_last_name_must_be_at_least_2_characters():
+
+    last_name_must_be_at_least_2_characters = funtion.driver.find_element(By.XPATH,"//div[normalize-space()='last_name must be at least 2 characters']").text
+    assert (last_name_must_be_at_least_2_characters == 'last_name must be at least 2 characters')
+#
+# def test_last_name_must_be_at():
+#     last_name_must_be_at= funtion.driver.find_element(By.XPATH,"//div[normalize-space()='last_name must be at least 2 characters']").text
+#     assert (last_name_must_be_at == 'last_name must be at least 2 characters')
+#     funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12345")
+
+
+
+#not_able_to_sign_up_with_invalid_zip
+
+def test_not_able_to_sign_up_with_invalid_zip():
+    funtion.driver.refresh()
+    funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12")
+    funtion.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
