@@ -8,7 +8,7 @@ funtion.open_browser()
 # TODO: add a test for checking smartfinancial title image
 
 def test_smart_financial_title_image():
-    funtion.driver.find_element(By.CLASS_NAME,"/text-center p-4").is_enabled()
+    funtion.driver.find_element(By.CSS_SELECTOR,".text-center.p-4").is_enabled()
 
 
 
@@ -44,7 +44,7 @@ def test_remember_me():
 
 def test_login():
     funtion.driver.find_element(By.XPATH,"//input[@placeholder='Enter email']").send_keys("piyush@ikshalabs.com")
-    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Piyush@123")
+    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Piyush@1234")
     time.sleep(5)
 
 def test_login_button_text():
