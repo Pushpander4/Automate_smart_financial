@@ -1,5 +1,8 @@
 import time
-from automated import funtion
+
+import pytest
+
+from Automation import funtion
 from selenium.webdriver.common.by import By
 
 funtion.open_browser()
@@ -57,9 +60,9 @@ def test_login_button():
     funtion.driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
 
-
+@pytest.mark.skip
 def test_able_to_login():
-    time.sleep(20)
+    time.sleep(2)
     profile_page_url= (funtion.driver.current_url)
     assert (profile_page_url == "https://xenodochial-stonebraker-d239bd.netlify.app/profile")
 

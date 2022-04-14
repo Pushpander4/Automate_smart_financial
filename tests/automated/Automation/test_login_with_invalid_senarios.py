@@ -1,5 +1,6 @@
 import time
-from automated import funtion
+from Automation import funtion
+
 from selenium.webdriver.common.by import By
 
 
