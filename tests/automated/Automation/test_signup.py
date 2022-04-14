@@ -179,5 +179,8 @@ def testbacktologin():
     assert (text_on_login_back == "Login")
 
 def test_click_on_login_button_to_go_back_to_login_page():
-    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").click()
+    back_to_login_text = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']")
+    funtion.driver.execute_script("arguments[0].scrollIntoView()",back_to_login_text)
+    time.sleep(3)
+    back_to_login_text.click()
 
