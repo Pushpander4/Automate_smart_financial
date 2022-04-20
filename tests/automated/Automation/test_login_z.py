@@ -38,6 +38,8 @@ def test_remember_me_text():
 def test_text_2022_Smart_Financial():
     t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
     assert (t_2022_Smart_Financial == "© 2022 SmartFinancial")
+
+
 def test_remember_me():
     funtion.driver.find_element(By.XPATH, "//input[@id='customControlInline']").is_enabled()
     funtion.driver.find_element(By.XPATH, "//input[@id='customControlInline']").click()
