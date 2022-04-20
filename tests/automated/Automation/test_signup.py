@@ -1,4 +1,4 @@
-#from selenium.webdriver.support.ui import Select
+# from selenium.webdriver.support.ui import Select
 import time
 
 from Automation import funtion
@@ -161,7 +161,8 @@ def test_click_terms_of_use():
 
 
 def test_already_have_an_account():
-    t_already_have_an_account = funtion.driver.find_element(By.CSS_SELECTOR, "div[class='mt-5 text-center'] p:nth-child(1)").text
+    t_already_have_an_account = funtion.driver.find_element(By.CSS_SELECTOR,
+                                                            "div[class='mt-5 text-center'] p:nth-child(1)").text
     assert (t_already_have_an_account == "Already have an account ? Login")
 def testbacktologin():
     text_on_login_back = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
@@ -170,7 +171,8 @@ def test_login_button_to_go_back_to_login_page_enable():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").is_enabled()
 
 def testtext_2022_Smart_Financial():
-    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH, "//p[normalize-space()='© 2022 SmartFinancial']").text
+    t_2022_Smart_Financial = funtion.driver.find_element(By.XPATH,
+                                                         "//p[normalize-space()='© 2022 SmartFinancial']").text
     assert (t_2022_Smart_Financial == "© 2022 SmartFinancial")
 
 
