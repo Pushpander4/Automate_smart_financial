@@ -47,6 +47,7 @@ def test_Please_enter_your_password():
 
 #try to  signup with already taken email
 #working
+time.sleep(2)
 def test_enter_signup_details():
     funtion.driver.refresh()
     funtion.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
@@ -64,8 +65,12 @@ def test_enter_signup_details():
     funtion.driver.find_element(By.XPATH, "//input[@id='email']").send_keys("piyush@ikshalabs.com")
     funtion.driver.find_element(By.XPATH, "//input[@name='password']").send_keys("Abcderfgh1@")
     funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
-    time.sleep(6)
+    time.sleep(2)
+
 def test_email_has_already_been_take():
+    logo = funtion.driver.find_element(By.XPATH, "//div[@class='text-center p-4']//img")
+    funtion.driver.execute_script("arguments[0].scrollIntoView()", logo)
+    time.sleep(2)
     email_has_already_been_take = funtion.driver.find_element(By.XPATH, "//div[@role = 'alert']").text
     assert (email_has_already_been_take == 'email has already been taken')
 
@@ -122,3 +127,4 @@ def test_not_able_to_sign_up_with_invalid_zip():
     funtion.driver.refresh()
     funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12")
     funtion.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
+    funtion.driver.back()

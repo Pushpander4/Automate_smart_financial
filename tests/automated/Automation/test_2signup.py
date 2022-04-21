@@ -135,9 +135,12 @@ def test_text_on_button_register():
 
 def test_click_button_register_enable():
     funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").is_enabled()
+    logo = funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']")
+    funtion.driver.execute_script("arguments[0].scrollIntoView()", logo)
 
 
 def test_click_button_register():
+    time.sleep(3)
     funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
 
 
@@ -155,7 +158,7 @@ def test_text_click_terms_of_use():
 def test_terms_of_use_enable():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").is_enabled()
 
-
+time.sleep(3)
 def test_click_terms_of_use():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").click()
 
