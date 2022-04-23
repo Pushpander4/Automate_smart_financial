@@ -7,8 +7,8 @@ funtion.open_browser()
 funtion.driver.implicitly_wait(5)
 #checking role creation
 def test_login():
-    funtion.driver.find_element(By.XPATH,"//input[@placeholder='Enter email']").send_keys("pushpander@ikshalabs.com")
-    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("smartfinancial")
+    funtion.driver.find_element(By.XPATH,"//input[@placeholder='Enter email']").send_keys("admin314@example.com")
+    funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Admin314@")
     text_on_login_button = funtion.driver.find_element(By.XPATH,"//button[@type='submit']").text
     assert (text_on_login_button == "Log In")
     funtion.driver.find_element(By.XPATH, "//button[@type='submit']").click()

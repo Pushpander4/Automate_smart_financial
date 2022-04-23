@@ -129,19 +129,19 @@ def testEnter_Password():
 
 
 def test_text_on_button_register():
-    text_on_button_register = funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").text
-    assert (text_on_button_register == "Register")
+    text_on_button_register = funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").text
+    assert (text_on_button_register == "Create New Account")
 
 
 def test_click_button_register_enable():
-    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").is_enabled()
-    logo = funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']")
+    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").is_enabled()
+    logo = funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']")
     funtion.driver.execute_script("arguments[0].scrollIntoView()", logo)
 
 
 def test_click_button_register():
     time.sleep(3)
-    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
+    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").click()
 
 
 def test_text_by_registering_you_agree_to_the():

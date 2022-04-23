@@ -14,7 +14,7 @@ def test_click_signup():
 def test_click_button_register():
     funtion.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(5)
-    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
+    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").click()
 def test_Please_enter_you_first_name():
     Please_enter_you_first_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your first name']").text
     assert (Please_enter_you_first_name == 'Please enter your first name')
@@ -64,7 +64,7 @@ def test_enter_signup_details():
     funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12345")
     funtion.driver.find_element(By.XPATH, "//input[@id='email']").send_keys("piyush@ikshalabs.com")
     funtion.driver.find_element(By.XPATH, "//input[@name='password']").send_keys("Abcderfgh1@")
-    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Register']").click()
+    funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").click()
     time.sleep(2)
 
 def test_email_has_already_been_take():
