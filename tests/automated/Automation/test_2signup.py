@@ -29,15 +29,15 @@ class TestSignup:
          funtion.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").is_enabled()
 
 
-    def testEnter_first_name():
+     def testEnter_first_name(self):
         Enter_first_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").text
         assert (Enter_first_name == "First Name")
         # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
         # print(text_name)
 
 
-    def testEnter_Last_name_enable():
-        funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").is_enabled()
+     def testEnter_Last_name_enable(self):
+         funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").is_enabled()
 
 
     def testEnter_last_name():
@@ -47,7 +47,7 @@ class TestSignup:
          # print(text_name)
 
 
-    def testEnter_phone_number_enable():
+     def testEnter_phone_number_enable():
          funtion.driver.find_element(By.XPATH, "//input[@name='phone']").is_enabled()
 
 
