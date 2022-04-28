@@ -1,103 +1,102 @@
 # from selenium.webdriver.support.ui import Select
 import time
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from Automation import funtion
 from selenium.webdriver.common.by import By
+import pytest
 
 funtion.open_browser()
 
+class TestSignup:
 
-def test_signup_enable_or_not():
-    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").is_enabled()
-
-
-def test_signup_text():
-    text_on_signup = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").text
-    assert (text_on_signup == "Signup now")
+     def test_signup_enable_or_not(self):
+         funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").is_enabled()
 
 
-def testClick_signup():
-    funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
-    time.sleep(5)
+     def test_signup_text(self):
+         text_on_signup = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").text
+         assert (text_on_signup == "Signup now")
 
 
-def testEnter_first_name_enable():
-    funtion.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").is_enabled()
+     def testClick_signup(self):
+         funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
+         time.sleep(5)
 
 
-def testEnter_first_name():
-    Enter_first_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").text
-    assert (Enter_first_name == "First Name")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
+     def testEnter_first_name_enable(self):
+
+         funtion.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").is_enabled()
 
 
-def testEnter_Last_name_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").is_enabled()
+    def testEnter_first_name():
+        Enter_first_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").text
+        assert (Enter_first_name == "First Name")
+        # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
+        # print(text_name)
 
 
-def testEnter_last_name():
-    Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Last Name']").text
-    assert (Enter_last_name == "Last Name")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
+    def testEnter_Last_name_enable():
+        funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").is_enabled()
 
 
-def testEnter_phone_number_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='phone']").is_enabled()
+    def testEnter_last_name():
+         Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Last Name']").text
+         assert (Enter_last_name == "Last Name")
+         # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
+         # print(text_name)
 
 
-def testEnter_phone_number():
-    Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Phone']").text
-    assert (Enter_last_name == "Phone")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
+    def testEnter_phone_number_enable():
+         funtion.driver.find_element(By.XPATH, "//input[@name='phone']").is_enabled()
 
 
-def testEnter_timezone_enable():
-
-     funtion.driver.find_element(By.CLASS_NAME, "css-8mmkcg").is_enabled()
-    #drp = Select(element)
-    # count the number of options
-    #print(len(element))
-
-
-def testEnter_timezone():
-    Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Timezone']").text
-    assert (Enter_last_name == "Timezone")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
+    def testEnter_phone_number():
+        Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Phone']").text
+        assert (Enter_last_name == "Phone")
+        # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
+        # print(text_name)
 
 
-def testEnter_address_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='address']").is_enabled()
+    def testEnter_timezone_enable():
+        funtion.driver.find_element(By.CLASS_NAME, "css-8mmkcg").is_enabled()
 
 
-def testEnter_Address():
-    Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Address']").text
-    assert (Enter_last_name == "Address")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
+    def testEnter_timezone():
+         Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Timezone']").text
+         assert (Enter_last_name == "Timezone")
 
 
-def testEnter_city_enable():
-    funtion.driver.find_element(By.ID, "react-select-3-input").is_enabled()
+    def testEnter_address_enable():
+        funtion.driver.find_element(By.XPATH, "//input[@name='address']").is_enabled()
 
 
-def testEnter_city_text():
-    city_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='City']").text
-    assert (city_text == "City")
-def testEnter_state_text():
-    state_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='State']").text
-    assert (state_text == "State")
-def testEnter_zipcode_enable():
-    funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").is_enabled()
+    def testEnter_Address():
+         Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Address']").text
+         assert (Enter_last_name == "Address")
+         # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
+         # print(text_name)
 
-def testEnter_zipcode():
-    Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Zip Code']").text
-    assert (Enter_last_name == "Zip Code")
-    # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
-    # print(text_name)
+
+    def testEnter_city_enable():
+         funtion.driver.find_element(By.ID, "react-select-3-input").is_enabled()
+
+
+    def testEnter_city_text():
+         city_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='City']").text
+         assert (city_text == "City")
+
+    def testEnter_state_text():
+        state_text = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='State']").text
+        assert (state_text == "State")
+    def testEnter_zipcode_enable():
+         funtion.driver.find_element(By.XPATH, "//input[@name='zip_code']").is_enabled()
+
+    def testEnter_zipcode():
+         Enter_last_name = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Zip Code']").text
+         assert (Enter_last_name == "Zip Code")
+         # text_name = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Username']").text
+         # print(text_name)
 
 
 def testEnter_email_place_enable():
@@ -159,6 +158,7 @@ def test_terms_of_use_enable():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").is_enabled()
 
 time.sleep(3)
+@pytest.mark.xfail  # Functionality is not yet implemented.
 def test_click_terms_of_use():
     funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").click()
 
@@ -179,7 +179,7 @@ def testtext_2022_Smart_Financial():
     assert (t_2022_Smart_Financial == "© 2022 SmartFinancial")
 
 
-def testbacktologin():
+def test_back_to_login():
     text_on_login_back = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
     assert (text_on_login_back == "Login")
 
@@ -187,5 +187,8 @@ def test_click_on_login_button_to_go_back_to_login_page():
     back_to_login_text = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']")
     funtion.driver.execute_script("arguments[0].scrollIntoView()",back_to_login_text)
     time.sleep(3)
-    back_to_login_text.click()
+    wait = WebDriverWait(funtion.driver, 10)
+    wait.until(EC.element_to_be_clickable(back_to_login_text)).click()
+
+
 
