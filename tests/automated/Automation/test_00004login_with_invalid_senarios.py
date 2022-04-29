@@ -11,26 +11,26 @@ funtion.open_browser()
 def test_Click_login():
     funtion.driver.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(2)
+
+
 def test_please_enter_your_email():
     email_alert = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Email']").text
     assert (email_alert == 'Please Enter Your Email')
+
+
 def test_please_enter_your_password():
     password_alert = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Password']").text
     assert (password_alert == 'Please Enter Your Password')
 
 #enter email , don't enter password and log in button is clicked.
-
 def test_enter_email_not_password():
     funtion.driver.refresh()
-
     funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys('piyush@ikshalabs.com')
     funtion.driver.find_element(By.XPATH, "//button[@type='submit']").click()
     password_alert = funtion.driver.find_element(By.XPATH, "//div[normalize-space()='Please Enter Your Password']").text
     assert (password_alert == 'Please Enter Your Password')
     time.sleep(2)
 #enter password , don't enter email and log in button is clicked.
-
-
 def test_enter_password_not_email():
     funtion.driver.refresh()
     time.sleep(3)
@@ -43,7 +43,6 @@ def test_enter_password_not_email():
 #enter invalid email
 def test_invalid_email():
     funtion.driver.refresh()
-
     funtion.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys('piyush@.com')
     funtion.driver.find_element(By.XPATH, "//button[@type='submit']").click()
     invalid_mail_alert = funtion.driver.find_element(By.XPATH, "//div[@type='invalid']").text
