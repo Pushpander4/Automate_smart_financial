@@ -6,8 +6,6 @@ from Automation import funtion
 from selenium.webdriver.common.by import By
 import pytest
 
-@pytest.mark.usefixtures("tc_setup")
-
 class TestSignup:
 
     def test_signup_enable_or_not(self):
