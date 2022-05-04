@@ -62,7 +62,9 @@ class Test_Roles_SF():
             except Exception as e:
                 print(e)
 
-
+    def test_log_out(self):
+        funtion.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
+        funtion.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
 
 
 
