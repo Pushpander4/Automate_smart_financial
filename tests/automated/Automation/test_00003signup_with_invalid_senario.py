@@ -96,7 +96,7 @@ def test_email_has_already_been_take():
 
 #user should not able to sign up with invalid email ID
 #working
-def test_user_should_not_able_to_log_in_with_in_valid_email():
+def test_user_should_not_able_to_signup_in_with_in_valid_email():
     funtion.driver.refresh()
     funtion.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
     funtion.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys("XYZ")
