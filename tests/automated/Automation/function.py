@@ -17,5 +17,3 @@ def open_browser():
 
 
 
-
-
