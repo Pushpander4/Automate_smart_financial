@@ -169,11 +169,13 @@ class TestSignup:
     def test_back_to_login(self):
         text_on_login_back = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
         assert text_on_login_back == "Login"
+        time.sleep(4)
 
 
     def test_click_on_login_button_to_go_back_to_login_page(self):
         back_to_login_text = funtion.driver.find_element(By.XPATH, "//a[normalize-space()='Login']")
         funtion.driver.execute_script("arguments[0].scrollIntoView()", back_to_login_text)
         time.sleep(3)
+        funtion.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
         wait = WebDriverWait(funtion.driver, 10)
         wait.until(EC.element_to_be_clickable(back_to_login_text)).click()
