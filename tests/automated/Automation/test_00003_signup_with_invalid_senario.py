@@ -9,8 +9,8 @@ from selenium.webdriver.common.by import By
 function.open_browser()
 function.driver.implicitly_wait(5)
 
-#when no details are entered for sign up . checking warning message
-#(Working)
+# when no details are entered for sign up . checking warning message
+# (Working)
 def test_click_signup():
     function.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
 
@@ -33,40 +33,33 @@ def test_please_select_a_time_zone():
     please_select_a_time_zone = function.driver.find_element(By.XPATH, "//span[normalize-space()='Please select a time zone']").text
     assert please_select_a_time_zone == 'Please select a time zone'
 
-
 def test_please_enter_your_address():
     please_enter_your_address = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your address']").text
     assert please_enter_your_address == 'Please enter your address'
-
 
 def test_please_enter_your_city():
     please_enter_your_city = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your city']").text
     assert please_enter_your_city == 'Please enter your city'
 
-
 def test_Please_enter_your_state():
     please_enter_your_city = function.driver.find_element(By.XPATH, "//span[normalize-space()='Please select your state']").text
     assert please_enter_your_city == 'Please select your state'
-
 
 def test_Please_enter_your_zip():
     please_enter_your_zip = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your zip']").text
     assert please_enter_your_zip == 'Please enter your zip'
 
-
 def test_Please_enter_a_valid_email():
     please_enter_a_valid_email = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter a valid email']").text
     assert please_enter_a_valid_email == 'Please enter a valid email'
-
 
 def test_Please_enter_your_password():
     Please_enter_your_password = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your password']").text
     assert Please_enter_your_password == 'Please enter your password'
 
 
-
-#try to  signup with already taken email
-#working
+# try to  signup with already taken email
+# working
 time.sleep(2)
 def test_enter_signup_details():
     function.driver.refresh()
@@ -94,10 +87,8 @@ def test_email_has_already_been_take():
     email_has_already_been_take = function.driver.find_element(By.XPATH, "//div[@role = 'alert']").text
     assert email_has_already_been_take == 'email has already been taken'
 
-
-
-#user should not able to sign up with invalid email ID
-#working
+# user should not able to sign up with invalid email ID
+# working
 def test_user_should_not_able_to_log_in_with_in_valid_email():
     function.driver.refresh()
     function.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
@@ -118,14 +109,13 @@ def test_user_should_not_able_to_log_in_with_in_valid_email():
     email_must_be_a_valid_email = function.driver.find_element(By.XPATH, "//div[normalize-space()='email must be a valid email']").text
     assert email_must_be_a_valid_email == 'email must be a valid email'
 
-#warning in first name and last name for more then 2 char and in address 3 char.
-#first_name_must_be_at_least_2_characters
+# warning in first name and last name for more then 2 char and in address 3 char.
+# first_name_must_be_at_least_2_characters
 def test_first_name_and_last_name_for_more_then_2_har_and_in_address_3_char():
     function.driver.refresh()
     function.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("A")
     function.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys("X")
     function.driver.find_element(By.XPATH, "//input[@name='address']").send_keys("fg")
-
 
 def test_first_name_must_be_at_least_2_characters():
     first_name_must_be_at_least_2_characters = function.driver.find_element(By.XPATH,
@@ -138,8 +128,7 @@ def test_last_name_must_be_at_least_2_characters():
                                                                           "//div[normalize-space()='last_name must be at least 2 characters']").text
     assert last_name_must_be_at_least_2_characters == 'last_name must be at least 2 characters'
 
-
-#not_able_to_sign_up_with_invalid_zip
+# not_able_to_sign_up_with_invalid_zip
 def test_not_able_to_sign_up_with_invalid_zip():
     function.driver.refresh()
     function.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12")
