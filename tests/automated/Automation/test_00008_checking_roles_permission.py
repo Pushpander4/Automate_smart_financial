@@ -90,7 +90,7 @@ class TestCheckRoles:
         assert roles == True
 
     """
-    same logic is applicable for Campaign and membership
+    same logic is applicable for Campaign and membershi
     """
 
 
