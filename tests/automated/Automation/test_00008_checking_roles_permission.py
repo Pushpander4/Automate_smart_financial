@@ -26,25 +26,25 @@ class TestCheckRoles:
         function.driver.find_element(By.XPATH, "//button[normalize-space()='Save']").click()
         time.sleep(5)
 
-        card_elements = function.driver.find_elements(By.CLASS_NAME, "card")
+        card_elements = function.driver.find_elements(By.XPATH, "//div[@class='card']")
         for card_elem in card_elements:
             try:
-                title_elem = card_elem.find_element(By.CLASS_NAME, "text-dark")
+                title_elem = card_elem.find_element(By.XPATH, "//a[@class='text-dark']")
                 if title_elem.text == role_name:
-                    card_elem.find_element(By.CLASS_NAME, "btn-sfpink").click()
+                    card_elem.find_element(By.XPATH, "//button[@class='btn btn-sfpink btn btn-secondary']").click()
             except Exception as e:
                 print(e)
 
     """
     Main toggle button of ROLE
-         
-    After main ROLE button is ON , All sub button should get ON.
+        After main ROLE button is ON , All sub button should get ON.
         Roles        = ON
         Create Role  = ON
         Read Role    = ON
         Update Roles = ON
         Delete Roles = ON
     """
+
     def test_parent_button_toggle_children(self):
         function.driver.find_element(By.ID, "1-switch-group-Role").click()
         time.sleep(2)
@@ -82,6 +82,7 @@ class TestCheckRoles:
         Update Roles = ON
         Delete Roles = ON
     """
+
     def test_all_child_button_on_turns_parent_button_on(self):
         function.driver.find_element(By.ID, "1-switch-item-can_delete").click()
         time.sleep(3)
@@ -91,3 +92,10 @@ class TestCheckRoles:
     """
     same logic is applicable for Campaign and membership
     """
+
+
+    def test_log_out(self):
+        function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
+        function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
+
+

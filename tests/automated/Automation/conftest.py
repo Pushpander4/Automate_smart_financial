@@ -8,8 +8,8 @@ function.driver.implicitly_wait(5)
 #creating login function
 @pytest.fixture(scope="class")
 def tc_setup():
-    function.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys("piyush@ikshalabs.com")
-    function.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Piyush@009")
+    function.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys("def@gmail.com")
+    function.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys("Def123456@")
     function.driver.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(3)
     # test teardown takes place after yield
@@ -17,4 +17,4 @@ def tc_setup():
 
 @pytest.fixture(scope="class")
 def get_data():
-    return ["piyush@ikshalabs.com", "Piyush@123", "Piyush@009"]
+    return ["def@gmail.com", "Def123456@", "Def123456@"]

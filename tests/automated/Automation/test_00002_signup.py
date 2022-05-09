@@ -113,7 +113,7 @@ class TestSignup:
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").is_enabled()
         time.sleep(3)
 
-    @pytest.mark.xfail  # Functionality is not yet implemented
+    @pytest.mark.skip(reason="This Functionality is not yet implemented")
     def test_click_terms_of_use(self):
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").click()
 

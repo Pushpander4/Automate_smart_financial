@@ -53,8 +53,10 @@ class TestLogin:
     def test_login_button(self):
         function.driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
-    @pytest.mark.skip
+
     def test_able_to_login(self):
         time.sleep(2)
         profile_page_url = function.driver.current_url
         assert (profile_page_url == "https://xenodochial-stonebraker-d239bd.netlify.app/profile")
+        function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
+        function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
