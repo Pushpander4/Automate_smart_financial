@@ -3,6 +3,8 @@ import pytest
 from Automation import function
 from selenium.webdriver.common.by import By
 
+
+
 function.open_browser()
 
 

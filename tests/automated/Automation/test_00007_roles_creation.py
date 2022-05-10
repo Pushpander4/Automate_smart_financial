@@ -6,11 +6,11 @@ import random
 
 
 function.open_browser()
-function.driver.implicitly_wait(5)
+
 #checking role creation
 time.sleep(5)
 
-
+function.driver.implicitly_wait(5)
 @pytest.mark.usefixtures("tc_setup")
 class TestRoles:
     def test_organization_present_in_sidebar(self):
@@ -77,9 +77,9 @@ class TestRoles:
         function.driver.find_element(By.XPATH, "//button[normalize-space()='Save']").click()
         time.sleep(4)
 
-    # def test_log_out(self):
-    #     function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
-    #     function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
+    def test_log_out(self):
+        function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
+        function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
 
 
 

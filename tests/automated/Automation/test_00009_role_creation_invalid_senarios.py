@@ -8,7 +8,7 @@ function.driver.implicitly_wait(5)
 #checking role creation
 time.sleep(5)
 @pytest.mark.skip(reason="This Functionality is not yet implemented(role getting create without entering name")
-def abc():
+def test_invalid_role_creation_senorios():
     pass
 # @pytest.mark.usefixtures("tc_setup")
 #

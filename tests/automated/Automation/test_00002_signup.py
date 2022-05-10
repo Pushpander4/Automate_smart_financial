@@ -16,60 +16,60 @@ class TestSignup:
         text_on_signup = function.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").text
         assert text_on_signup == "Signup now"
 
-    def testClick_signup(self):
+    def test_click_signup(self):
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
         time.sleep(5)
 
-    def testEnter_first_name_enable(self):
+    def test_enter_first_name_enable(self):
         function.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").is_enabled()
 
-    def testEnter_first_name(self):
+    def test_enter_first_name(self):
         Enter_first_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").text
         assert Enter_first_name == "First Name"
 
-    def testEnter_Last_name_enable(self):
+    def test_enter_Last_name_enable(self):
         function.driver.find_element(By.XPATH, "//input[@name='last_name']").is_enabled()
 
-    def testEnter_last_name(self):
+    def test_enter_last_name(self):
         Enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Last Name']").text
         assert Enter_last_name == "Last Name"
 
-    def testEnter_phone_number_enable(self):
+    def test_enter_phone_number_enable(self):
         function.driver.find_element(By.XPATH, "//input[@name='phone']").is_enabled()
 
-    def testEnter_phone_number(self):
+    def test_enter_phone_number(self):
         Enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Phone']").text
         assert Enter_last_name == "Phone"
 
-    def testEnter_timezone_enable(self):
+    def test_enter_timezone_enable(self):
         function.driver.find_element(By.CLASS_NAME, "css-8mmkcg").is_enabled()
 
-    def testEnter_timezone(self):
+    def test_enter_timezone(self):
         Enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Timezone']").text
         assert Enter_last_name == "Timezone"
 
-    def testEnter_address_enable(self):
+    def test_enter_address_enable(self):
         function.driver.find_element(By.XPATH, "//input[@name='address']").is_enabled()
 
-    def testEnter_address(self):
+    def test_enter_address(self):
         enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Address']").text
         assert enter_last_name == "Address"
 
     def test_enter_city_enable(self):
         function.driver.find_element(By.ID, "react-select-3-input").is_enabled()
 
-    def testenter_city_text(self):
+    def test_enter_city_text(self):
         city_text = function.driver.find_element(By.XPATH, "//label[normalize-space()='City']").text
         assert city_text == "City"
 
-    def testenter_state_text(self):
+    def test_enter_state_text(self):
         state_text = function.driver.find_element(By.XPATH, "//label[normalize-space()='State']").text
         assert  state_text == "State"
 
-    def testenter_zipcode_enable(self):
+    def test_enter_zipcode_enable(self):
         function.driver.find_element(By.XPATH, "//input[@name='zip_code']").is_enabled()
 
-    def testenter_zipcode(self):
+    def test_enter_zipcode(self):
         enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Zip Code']").text
         assert enter_last_name == "Zip Code"
 
@@ -122,7 +122,7 @@ class TestSignup:
             By.CSS_SELECTOR, "div[class='mt-5 text-center'] p:nth-child(1)").text
         assert t_already_have_an_account == "Already have an account ? Login"
 
-    def testbacktologin(self):
+    def test_backtologin(self):
         text_on_login_back = function.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
         assert text_on_login_back == "Login"
 

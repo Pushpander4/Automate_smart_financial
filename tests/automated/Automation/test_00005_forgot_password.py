@@ -9,11 +9,13 @@ function.open_browser()
 
 
 class TestForgotPassword:
+
+
     def test_text_of_forgot_password(self):
         text_of_sign_in_with = function.driver.find_element(By.XPATH, "//a[@class='text-muted']").text
         assert text_of_sign_in_with == "Forgot your password?", 'TEST-13 "Forgot your password?" should be present'
 
-    def test_Forgot_password_enable(self):
+    def test_forgot_password_enable(self):
         function.driver.find_element(By.XPATH, "//a[@class='text-muted']").is_enabled()
 
     def test_Click_forgot_password(self):
