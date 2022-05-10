@@ -7,7 +7,6 @@ import pytest
 function.open_browser()
 function.driver.implicitly_wait(5)
 
-
 @pytest.mark.usefixtures("tc_setup")
 class TestCheckRoles:
     def test_setup_create_blank_role(self):
