@@ -16,7 +16,7 @@ class TestSignup:
         text_on_signup = function.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").text
         assert text_on_signup == "Signup now"
 
-    def testClick_signup(self):
+    def test_click_signup(self):
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
         time.sleep(5)
 
@@ -58,18 +58,18 @@ class TestSignup:
     def test_enter_city_enable(self):
         function.driver.find_element(By.ID, "react-select-3-input").is_enabled()
 
-    def testenter_city_text(self):
+    def test_enter_city_text(self):
         city_text = function.driver.find_element(By.XPATH, "//label[normalize-space()='City']").text
         assert city_text == "City"
 
-    def testenter_state_text(self):
+    def test_enter_state_text(self):
         state_text = function.driver.find_element(By.XPATH, "//label[normalize-space()='State']").text
         assert  state_text == "State"
 
-    def testenter_zipcode_enable(self):
+    def test_enter_zipcode_enable(self):
         function.driver.find_element(By.XPATH, "//input[@name='zip_code']").is_enabled()
 
-    def testenter_zipcode(self):
+    def test_enter_zipcode(self):
         enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Zip Code']").text
         assert enter_last_name == "Zip Code"
 
@@ -113,7 +113,7 @@ class TestSignup:
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").is_enabled()
         time.sleep(3)
 
-    @pytest.mark.xfail  # Functionality is not yet implemented
+    @pytest.mark.xfail(reason="This functionality is not yet implemented")
     def test_click_terms_of_use(self):
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").click()
 
@@ -122,7 +122,7 @@ class TestSignup:
             By.CSS_SELECTOR, "div[class='mt-5 text-center'] p:nth-child(1)").text
         assert t_already_have_an_account == "Already have an account ? Login"
 
-    def testbacktologin(self):
+    def test_back_to_login(self):
         text_on_login_back = function.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
         assert text_on_login_back == "Login"
 
@@ -133,11 +133,6 @@ class TestSignup:
         t_2022_Smart_Financial = function.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
         assert t_2022_Smart_Financial == "© 2022 SmartFinancial"
 
-    def test_back_to_login(self):
-        text_on_login_back = function.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
-        assert text_on_login_back == "Login"
-        time.sleep(4)
-
     def test_click_on_login_button_to_go_back_to_login_page(self):
         back_to_login_text = function.driver.find_element(By.LINK_TEXT, "Login")
         function.driver.execute_script("arguments[0].scrollIntoView()", back_to_login_text)
@@ -146,4 +141,3 @@ class TestSignup:
         time.sleep(3)
         wait = WebDriverWait(function.driver, 10)
         wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Login"))).click()
-        # function.driver.find_element(By.XPATH, "//a[@class='font-weight-medium text-sfblue']").click()

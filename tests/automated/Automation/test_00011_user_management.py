@@ -22,7 +22,7 @@ class TestUserManagement:
 
     def test_roles_drop(self):
         text_role_drop = function.driver.find_element(By.XPATH, "//label[@class='form-label']").text
-        assert text_role_drop == "Roles"
+        assert text_role_drop == "Roles", "Value of text is not 'Roles'"
 
     @pytest.mark.skip
     def test_roles_drop_enable(self):
@@ -34,7 +34,7 @@ class TestUserManagement:
     def test_add_user_button(self):
         time.sleep(2)
         text_button = function.driver.find_element(By.XPATH, "//button[normalize-space()='Add New User']").text
-        assert text_button == "Add New User"
+        assert text_button == "Add New User",  "Value of text is not 'Add New User'"
 
     def test_button_enable(self):
         function.driver.find_element(By.XPATH, "//button[normalize-space()='Add New User']").is_enabled()
