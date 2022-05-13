@@ -20,38 +20,38 @@ class TestSignup:
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
         time.sleep(5)
 
-    def test_enter_first_name_enable(self):
+    def testEnter_first_name_enable(self):
         function.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").is_enabled()
 
-    def test_enter_first_name(self):
+    def testEnter_first_name(self):
         Enter_first_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='First Name']").text
         assert Enter_first_name == "First Name"
 
-    def test_enter_Last_name_enable(self):
+    def testEnter_Last_name_enable(self):
         function.driver.find_element(By.XPATH, "//input[@name='last_name']").is_enabled()
 
-    def test_enter_last_name(self):
+    def testEnter_last_name(self):
         Enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Last Name']").text
         assert Enter_last_name == "Last Name"
 
-    def test_enter_phone_number_enable(self):
-        function.driver.find_element(By.XPATH, "//input[@name='phone']").is_enabled()
+    def testEnter_phone_number_enable(self):
+        function.driver.find_element(By.XPATH, "//input[@name='phone_num']").is_enabled()
 
-    def test_enter_phone_number(self):
+    def testEnter_phone_number(self):
         Enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Phone']").text
         assert Enter_last_name == "Phone"
 
-    def test_enter_timezone_enable(self):
+    def testEnter_timezone_enable(self):
         function.driver.find_element(By.CLASS_NAME, "css-8mmkcg").is_enabled()
 
-    def test_enter_timezone(self):
+    def testEnter_timezone(self):
         Enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Timezone']").text
         assert Enter_last_name == "Timezone"
 
-    def test_enter_address_enable(self):
+    def testEnter_address_enable(self):
         function.driver.find_element(By.XPATH, "//input[@name='address']").is_enabled()
 
-    def test_enter_address(self):
+    def testEnter_address(self):
         enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Address']").text
         assert enter_last_name == "Address"
 
@@ -113,7 +113,7 @@ class TestSignup:
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").is_enabled()
         time.sleep(3)
 
-    @pytest.mark.skip(reason="This Functionality is not yet implemented")
+    @pytest.mark.xfail(reason="This functionality is not yet implemented")
     def test_click_terms_of_use(self):
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Terms of Use']").click()
 
@@ -122,7 +122,7 @@ class TestSignup:
             By.CSS_SELECTOR, "div[class='mt-5 text-center'] p:nth-child(1)").text
         assert t_already_have_an_account == "Already have an account ? Login"
 
-    def test_backtologin(self):
+    def test_back_to_login(self):
         text_on_login_back = function.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
         assert text_on_login_back == "Login"
 
@@ -133,15 +133,11 @@ class TestSignup:
         t_2022_Smart_Financial = function.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
         assert t_2022_Smart_Financial == "© 2022 SmartFinancial"
 
-    def test_back_to_login(self):
-        text_on_login_back = function.driver.find_element(By.XPATH, "//a[normalize-space()='Login']").text
-        assert text_on_login_back == "Login"
-        time.sleep(4)
-
     def test_click_on_login_button_to_go_back_to_login_page(self):
-        back_to_login_text = function.driver.find_element(By.XPATH, "//a[normalize-space()='Login']")
+        back_to_login_text = function.driver.find_element(By.LINK_TEXT, "Login")
         function.driver.execute_script("arguments[0].scrollIntoView()", back_to_login_text)
-        time.sleep(3)
+        time.sleep(8)
         function.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
+        time.sleep(3)
         wait = WebDriverWait(function.driver, 10)
-        wait.until(EC.element_to_be_clickable(back_to_login_text)).click()
+        wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Login"))).click()
