@@ -42,8 +42,8 @@ class TestLogin:
 
     def test_login(self, get_data):
         function.driver.refresh()
-        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys(get_data[0])
-        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys(get_data[2])
+        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys(get_data.self_email)
+        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys(get_data.self_password)
         time.sleep(5)
 
     def test_login_button_text(self):
@@ -53,8 +53,14 @@ class TestLogin:
     def test_login_button(self):
         function.driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
-    @pytest.mark.skip
+    # @pytest.mark.skip
     def test_able_to_login(self):
-        time.sleep(2)
+        time.sleep(4)
         profile_page_url = function.driver.current_url
-        assert (profile_page_url == "https://xenodochial-stonebraker-d239bd.netlify.app/profile")
+        assert (profile_page_url == "https://singular-swan-4802c7.netlify.app/profile")
+        time.sleep(2)
+
+
+    def test_log_out(self):
+        function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
+        function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()

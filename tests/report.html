@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 08-May-2022 at 21:15:35 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 13-May-2022 at 16:33:26 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -443,13 +443,13 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>macOS-12.3.1-x86_64-i386-64bit</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"html": "3.1.1", "metadata": "2.0.1", "order": "1.0.1"}</td></tr>
+        <td>{"Faker": "13.11.0", "html": "3.1.1", "metadata": "2.0.1", "order": "1.0.1"}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.9.10</td></tr></table>
     <h2>Summary</h2>
-    <p>90 tests ran in 165.08 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">86 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">3 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">1 unexpected passes</span>
+    <p>104 tests ran in 193.64 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">103 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">4 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">1 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -460,38 +460,11 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_email_has_already_been_take</td>
-          <td class="col-duration">7.10</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">def test_email_has_already_been_take():<br/>        logo = function.driver.find_element(By.XPATH, &quot;//div[@class=&#x27;text-center p-4&#x27;]//img&quot;)<br/>        function.driver.execute_script(&quot;arguments[0].scrollIntoView()&quot;, logo)<br/>        time.sleep(2)<br/>&gt;       email_has_already_been_take = function.driver.find_element(By.XPATH, &quot;//div[@role = &#x27;alert&#x27;]&quot;).text<br/><br/>automated/Automation/test_00003_signup_with_invalid_senario.py:87: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:1244: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {<br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:424: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x107dde4f0&gt;<br/>response = {&#x27;status&#x27;: 404, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;no such element&quot;,&quot;message&quot;:&quot;no such element: Unable to locate element: {\...ff81ca214e1 _pthread_start + 125\\n20  libsystem_pthread.dylib             0x00007ff81ca1cf6b thread_start + 15\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;<br/>        Checks that a JSON response from the WebDriver does not have an error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&#x27;status&#x27;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&#x27;value&#x27;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&#x27;value&#x27;]<br/>                    status = value.get(&#x27;error&#x27;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&#x27;message&#x27;)<br/>                    else:<br/>                        message = value.get(&#x27;message&#x27;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif status in ErrorCode.INVALID_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&#x27;value&#x27;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &#x27;message&#x27; in value:<br/>            message = value[&#x27;message&#x27;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &#x27;screen&#x27; in value:<br/>            screen = value[&#x27;screen&#x27;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&#x27;stackTrace&#x27;) or value.get(&#x27;stacktrace&#x27;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&#x27;\n&#x27;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = self._value_or_default(frame, &#x27;lineNumber&#x27;, &#x27;&#x27;)<br/>                        file = self._value_or_default(frame, &#x27;fileName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if line:<br/>                            file = &quot;%s:%s&quot; % (file, line)<br/>                        meth = self._value_or_default(frame, &#x27;methodName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if &#x27;className&#x27; in frame:<br/>                            meth = &quot;%s.%s&quot; % (frame[&#x27;className&#x27;], meth)<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &#x27;data&#x27; in value:<br/>                alert_text = value[&#x27;data&#x27;].get(&#x27;text&#x27;)<br/>            elif &#x27;alert&#x27; in value:<br/>                alert_text = value[&#x27;alert&#x27;].get(&#x27;text&#x27;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role = &#x27;alert&#x27;]&quot;}</span><br/><span class="error">E         (Session info: chrome=101.0.4951.54)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       0   chromedriver                        0x000000010105f2c9 chromedriver + 5120713</span><br/><span class="error">E       1   chromedriver                        0x0000000100fede33 chromedriver + 4656691</span><br/><span class="error">E       2   chromedriver                        0x0000000100bdd158 chromedriver + 393560</span><br/><span class="error">E       3   chromedriver                        0x0000000100c11edd chromedriver + 610013</span><br/><span class="error">E       4   chromedriver                        0x0000000100c12161 chromedriver + 610657</span><br/><span class="error">E       5   chromedriver                        0x0000000100c44244 chromedriver + 815684</span><br/><span class="error">E       6   chromedriver                        0x0000000100c2f4ad chromedriver + 730285</span><br/><span class="error">E       7   chromedriver                        0x0000000100c41f41 chromedriver + 806721</span><br/><span class="error">E       8   chromedriver                        0x0000000100c2f373 chromedriver + 729971</span><br/><span class="error">E       9   chromedriver                        0x0000000100c05609 chromedriver + 558601</span><br/><span class="error">E       10  chromedriver                        0x0000000100c06635 chromedriver + 562741</span><br/><span class="error">E       11  chromedriver                        0x0000000101031b1d chromedriver + 4934429</span><br/><span class="error">E       12  chromedriver                        0x0000000101036295 chromedriver + 4952725</span><br/><span class="error">E       13  chromedriver                        0x000000010103b3cf chromedriver + 4973519</span><br/><span class="error">E       14  chromedriver                        0x0000000101036cba chromedriver + 4955322</span><br/><span class="error">E       15  chromedriver                        0x000000010101137c chromedriver + 4801404</span><br/><span class="error">E       16  chromedriver                        0x0000000101050c68 chromedriver + 5061736</span><br/><span class="error">E       17  chromedriver                        0x0000000101050def chromedriver + 5062127</span><br/><span class="error">E       18  chromedriver                        0x00000001010665e5 chromedriver + 5150181</span><br/><span class="error">E       19  libsystem_pthread.dylib             0x00007ff81ca214e1 _pthread_start + 125</span><br/><span class="error">E       20  libsystem_pthread.dylib             0x00007ff81ca1cf6b thread_start + 15</span><br/><br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:247: NoSuchElementException<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">automated/Automation/test_00004_login_with_invalid_senarios.py::TestInvalidLogin::test_invalid_password</td>
-          <td class="col-duration">19.83</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;Automation.test_00004_login_with_invalid_senarios.TestInvalidLogin object at 0x107ecf220&gt;, get_data = [&#x27;piyush@ikshalabs.com&#x27;, &#x27;Piyush@123&#x27;, &#x27;Piyush@009&#x27;]<br/><br/>    def test_invalid_password(self, get_data):<br/>        function.driver.refresh()<br/>        function.driver.find_element(By.XPATH, &quot;//input[@placeholder=&#x27;Enter email&#x27;]&quot;).send_keys(get_data[0])<br/>        function.driver.find_element(By.XPATH, &quot;//input[@placeholder=&#x27;Enter Password&#x27;]&quot;).send_keys(get_data[1])<br/>        function.driver.find_element(By.XPATH, &quot;//button[@type=&#x27;submit&#x27;]&quot;).click()<br/>        time.sleep(6)<br/>        function.driver.find_element(By.XPATH, &quot;//input[@placeholder=&#x27;Enter email&#x27;]&quot;).clear()<br/>        time.sleep(4)<br/>        function.driver.find_element(By.XPATH, &quot;//input[@placeholder=&#x27;Enter Password&#x27;]&quot;).clear()<br/>        time.sleep(4)<br/>&gt;       invalid_password_alert = function.driver.find_element(By.XPATH, &quot;//div[@role=&#x27;alert&#x27;]&quot;).text<br/><br/>automated/Automation/test_00004_login_with_invalid_senarios.py:59: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:1244: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {<br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:424: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x107dde4f0&gt;<br/>response = {&#x27;status&#x27;: 404, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;no such element&quot;,&quot;message&quot;:&quot;no such element: Unable to locate element: {\...ff81ca214e1 _pthread_start + 125\\n20  libsystem_pthread.dylib             0x00007ff81ca1cf6b thread_start + 15\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;<br/>        Checks that a JSON response from the WebDriver does not have an error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&#x27;status&#x27;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&#x27;value&#x27;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&#x27;value&#x27;]<br/>                    status = value.get(&#x27;error&#x27;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&#x27;message&#x27;)<br/>                    else:<br/>                        message = value.get(&#x27;message&#x27;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif status in ErrorCode.INVALID_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&#x27;value&#x27;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &#x27;message&#x27; in value:<br/>            message = value[&#x27;message&#x27;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &#x27;screen&#x27; in value:<br/>            screen = value[&#x27;screen&#x27;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&#x27;stackTrace&#x27;) or value.get(&#x27;stacktrace&#x27;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&#x27;\n&#x27;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = self._value_or_default(frame, &#x27;lineNumber&#x27;, &#x27;&#x27;)<br/>                        file = self._value_or_default(frame, &#x27;fileName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if line:<br/>                            file = &quot;%s:%s&quot; % (file, line)<br/>                        meth = self._value_or_default(frame, &#x27;methodName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if &#x27;className&#x27; in frame:<br/>                            meth = &quot;%s.%s&quot; % (frame[&#x27;className&#x27;], meth)<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &#x27;data&#x27; in value:<br/>                alert_text = value[&#x27;data&#x27;].get(&#x27;text&#x27;)<br/>            elif &#x27;alert&#x27; in value:<br/>                alert_text = value[&#x27;alert&#x27;].get(&#x27;text&#x27;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@role=&#x27;alert&#x27;]&quot;}</span><br/><span class="error">E         (Session info: chrome=101.0.4951.54)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       0   chromedriver                        0x000000010105f2c9 chromedriver + 5120713</span><br/><span class="error">E       1   chromedriver                        0x0000000100fede33 chromedriver + 4656691</span><br/><span class="error">E       2   chromedriver                        0x0000000100bdd158 chromedriver + 393560</span><br/><span class="error">E       3   chromedriver                        0x0000000100c11edd chromedriver + 610013</span><br/><span class="error">E       4   chromedriver                        0x0000000100c12161 chromedriver + 610657</span><br/><span class="error">E       5   chromedriver                        0x0000000100c44244 chromedriver + 815684</span><br/><span class="error">E       6   chromedriver                        0x0000000100c2f4ad chromedriver + 730285</span><br/><span class="error">E       7   chromedriver                        0x0000000100c41f41 chromedriver + 806721</span><br/><span class="error">E       8   chromedriver                        0x0000000100c2f373 chromedriver + 729971</span><br/><span class="error">E       9   chromedriver                        0x0000000100c05609 chromedriver + 558601</span><br/><span class="error">E       10  chromedriver                        0x0000000100c06635 chromedriver + 562741</span><br/><span class="error">E       11  chromedriver                        0x0000000101031b1d chromedriver + 4934429</span><br/><span class="error">E       12  chromedriver                        0x0000000101036295 chromedriver + 4952725</span><br/><span class="error">E       13  chromedriver                        0x000000010103b3cf chromedriver + 4973519</span><br/><span class="error">E       14  chromedriver                        0x0000000101036cba chromedriver + 4955322</span><br/><span class="error">E       15  chromedriver                        0x000000010101137c chromedriver + 4801404</span><br/><span class="error">E       16  chromedriver                        0x0000000101050c68 chromedriver + 5061736</span><br/><span class="error">E       17  chromedriver                        0x0000000101050def chromedriver + 5062127</span><br/><span class="error">E       18  chromedriver                        0x00000001010665e5 chromedriver + 5150181</span><br/><span class="error">E       19  libsystem_pthread.dylib             0x00007ff81ca214e1 _pthread_start + 125</span><br/><span class="error">E       20  libsystem_pthread.dylib             0x00007ff81ca1cf6b thread_start + 15</span><br/><br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:247: NoSuchElementException<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">automated/Automation/test_00008_checking_roles_permission.py::TestCheckRoles::test_setup_create_blank_role</td>
-          <td class="col-duration">1.04</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;Automation.test_00008_checking_roles_permission.TestCheckRoles object at 0x107eda6d0&gt;<br/><br/>    def test_setup_create_blank_role(self):<br/>        role_number_suffix = random.randint(100000, 999999)<br/>        role_name = &quot;Team member &quot; + str(role_number_suffix)<br/>    <br/>&gt;       function.driver.find_element(By.XPATH, &quot;//a[@class=&#x27;has-arrow&#x27;]&quot;).click()<br/><br/>automated/Automation/test_00008_checking_roles_permission.py:17: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py:81: in click<br/>    self._execute(Command.CLICK_ELEMENT)<br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webelement.py:710: in _execute<br/>    return self._parent.execute(command, params)<br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:424: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x107dde4f0&gt;<br/>response = {&#x27;status&#x27;: 400, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;element click intercepted&quot;,&quot;message&quot;:&quot;element click intercepted: Element ...ff81ca214e1 _pthread_start + 125\\n24  libsystem_pthread.dylib             0x00007ff81ca1cf6b thread_start + 15\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;<br/>        Checks that a JSON response from the WebDriver does not have an error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&#x27;status&#x27;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&#x27;value&#x27;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&#x27;value&#x27;]<br/>                    status = value.get(&#x27;error&#x27;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&#x27;message&#x27;)<br/>                    else:<br/>                        message = value.get(&#x27;message&#x27;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif status in ErrorCode.INVALID_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&#x27;value&#x27;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &#x27;message&#x27; in value:<br/>            message = value[&#x27;message&#x27;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &#x27;screen&#x27; in value:<br/>            screen = value[&#x27;screen&#x27;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&#x27;stackTrace&#x27;) or value.get(&#x27;stacktrace&#x27;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&#x27;\n&#x27;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = self._value_or_default(frame, &#x27;lineNumber&#x27;, &#x27;&#x27;)<br/>                        file = self._value_or_default(frame, &#x27;fileName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if line:<br/>                            file = &quot;%s:%s&quot; % (file, line)<br/>                        meth = self._value_or_default(frame, &#x27;methodName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if &#x27;className&#x27; in frame:<br/>                            meth = &quot;%s.%s&quot; % (frame[&#x27;className&#x27;], meth)<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &#x27;data&#x27; in value:<br/>                alert_text = value[&#x27;data&#x27;].get(&#x27;text&#x27;)<br/>            elif &#x27;alert&#x27; in value:<br/>                alert_text = value[&#x27;alert&#x27;].get(&#x27;text&#x27;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (129, -235)</span><br/><span class="error">E         (Session info: chrome=101.0.4951.54)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       0   chromedriver                        0x000000010105f2c9 chromedriver + 5120713</span><br/><span class="error">E       1   chromedriver                        0x0000000100fede33 chromedriver + 4656691</span><br/><span class="error">E       2   chromedriver                        0x0000000100bdd158 chromedriver + 393560</span><br/><span class="error">E       3   chromedriver                        0x0000000100c19638 chromedriver + 640568</span><br/><span class="error">E       4   chromedriver                        0x0000000100c171b3 chromedriver + 631219</span><br/><span class="error">E       5   chromedriver                        0x0000000100c14814 chromedriver + 620564</span><br/><span class="error">E       6   chromedriver                        0x0000000100c135b2 chromedriver + 615858</span><br/><span class="error">E       7   chromedriver                        0x0000000100c07249 chromedriver + 565833</span><br/><span class="error">E       8   chromedriver                        0x0000000100c2f482 chromedriver + 730242</span><br/><span class="error">E       9   chromedriver                        0x0000000100c06b05 chromedriver + 563973</span><br/><span class="error">E       10  chromedriver                        0x0000000100c2f58e chromedriver + 730510</span><br/><span class="error">E       11  chromedriver                        0x0000000100c41f41 chromedriver + 806721</span><br/><span class="error">E       12  chromedriver                        0x0000000100c2f373 chromedriver + 729971</span><br/><span class="error">E       13  chromedriver                        0x0000000100c05609 chromedriver + 558601</span><br/><span class="error">E       14  chromedriver                        0x0000000100c06635 chromedriver + 562741</span><br/><span class="error">E       15  chromedriver                        0x0000000101031b1d chromedriver + 4934429</span><br/><span class="error">E       16  chromedriver                        0x0000000101036295 chromedriver + 4952725</span><br/><span class="error">E       17  chromedriver                        0x000000010103b3cf chromedriver + 4973519</span><br/><span class="error">E       18  chromedriver                        0x0000000101036cba chromedriver + 4955322</span><br/><span class="error">E       19  chromedriver                        0x000000010101137c chromedriver + 4801404</span><br/><span class="error">E       20  chromedriver                        0x0000000101050c68 chromedriver + 5061736</span><br/><span class="error">E       21  chromedriver                        0x0000000101050def chromedriver + 5062127</span><br/><span class="error">E       22  chromedriver                        0x00000001010665e5 chromedriver + 5150181</span><br/><span class="error">E       23  libsystem_pthread.dylib             0x00007ff81ca214e1 _pthread_start + 125</span><br/><span class="error">E       24  libsystem_pthread.dylib             0x00007ff81ca1cf6b thread_start + 15</span><br/><br/>/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:247: ElementClickInterceptedException<br/></div></td></tr></tbody>
       <tbody class="xpassed results-table-row">
         <tr>
           <td class="col-result">XPassed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_click_terms_of_use</td>
-          <td class="col-duration">0.04</td>
+          <td class="col-duration">0.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -513,21 +486,30 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">(&#x27;/Users/piyushwadhwa/Downloads/SF git clone/Automate_smart_financial/tests/automated/Automation/test_00003_signup_with_invalid_senario.py&#x27;, 125, &#x27;Skipped: This Functionality is noy yet implemented (last_name must be at least 2 characters)&#x27;)<br/></div></td></tr></tbody>
+            <div class="log">(&#x27;/Users/piyushwadhwa/Downloads/SF git clone/Automate_smart_financial/tests/automated/Automation/test_00003_signup_with_invalid_senario.py&#x27;, 133, &#x27;Skipped: This Functionality is noy yet implemented (last_name must be at least 2 characters)&#x27;)<br/></div></td></tr></tbody>
       <tbody class="skipped results-table-row">
         <tr>
           <td class="col-result">Skipped</td>
-          <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_able_to_login</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_roles_drop_enable</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">(&#x27;/Users/piyushwadhwa/Downloads/SF git clone/Automate_smart_financial/tests/automated/Automation/test_00006_login.py&#x27;, 56, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+            <div class="log">(&#x27;/Users/piyushwadhwa/Downloads/SF git clone/Automate_smart_financial/tests/automated/Automation/test_00011_user_management.py&#x27;, 27, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_edit_user</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/Users/piyushwadhwa/Downloads/SF git clone/Automate_smart_financial/tests/automated/Automation/test_00011_user_management.py&#x27;, 90, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00001_open_browser.py::test_T1_open_browser</td>
-          <td class="col-duration">3.47</td>
+          <td class="col-duration">3.59</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -536,7 +518,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_signup_enable_or_not</td>
-          <td class="col-duration">0.07</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -554,7 +536,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::testClick_signup</td>
-          <td class="col-duration">5.09</td>
+          <td class="col-duration">5.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -563,7 +545,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::testEnter_first_name_enable</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -572,7 +554,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::testEnter_first_name</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -599,7 +581,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::testEnter_phone_number_enable</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -716,7 +698,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_enter_Password_enable</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -752,7 +734,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_click_button_register</td>
-          <td class="col-duration">3.08</td>
+          <td class="col-duration">3.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -761,7 +743,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_text_by_registering_you_agree_to_the</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -770,7 +752,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_text_click_terms_of_use</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -779,7 +761,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_terms_of_use_enable</td>
-          <td class="col-duration">3.01</td>
+          <td class="col-duration">3.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -788,7 +770,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_already_have_an_account</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.04</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -824,7 +806,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_back_to_login</td>
-          <td class="col-duration">4.01</td>
+          <td class="col-duration">4.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -833,7 +815,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00002_signup.py::TestSignup::test_click_on_login_button_to_go_back_to_login_page</td>
-          <td class="col-duration">3.09</td>
+          <td class="col-duration">11.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -842,7 +824,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_click_signup</td>
-          <td class="col-duration">0.06</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -851,7 +833,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_click_button_register</td>
-          <td class="col-duration">5.07</td>
+          <td class="col-duration">5.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -860,7 +842,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_please_enter_you_first_name</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -878,7 +860,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_please_enter_your_address</td>
-          <td class="col-duration">0.03</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -887,7 +869,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_please_enter_your_city</td>
-          <td class="col-duration">0.03</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -932,7 +914,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_enter_signup_details</td>
-          <td class="col-duration">10.95</td>
+          <td class="col-duration">11.70</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -940,8 +922,17 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_user_should_not_able_to_log_in_with_in_valid_email</td>
-          <td class="col-duration">8.14</td>
+          <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_email_exists</td>
+          <td class="col-duration">2.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_user_should_not_able_to_log_in_with_invalid_email</td>
+          <td class="col-duration">8.30</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -950,7 +941,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_first_name_and_last_name_for_more_then_2_har_and_in_address_3_char</td>
-          <td class="col-duration">0.57</td>
+          <td class="col-duration">0.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -968,7 +959,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00003_signup_with_invalid_senario.py::test_not_able_to_sign_up_with_invalid_zip</td>
-          <td class="col-duration">0.56</td>
+          <td class="col-duration">0.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -977,7 +968,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00004_login_with_invalid_senarios.py::TestInvalidLogin::test_click_login</td>
-          <td class="col-duration">2.13</td>
+          <td class="col-duration">2.07</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -986,7 +977,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00004_login_with_invalid_senarios.py::TestInvalidLogin::test_please_enter_your_email</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1004,7 +995,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00004_login_with_invalid_senarios.py::TestInvalidLogin::test_enter_email_not_password</td>
-          <td class="col-duration">2.64</td>
+          <td class="col-duration">3.17</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1013,7 +1004,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00004_login_with_invalid_senarios.py::TestInvalidLogin::test_enter_password_not_email</td>
-          <td class="col-duration">3.60</td>
+          <td class="col-duration">3.77</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1022,7 +1013,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00004_login_with_invalid_senarios.py::TestInvalidLogin::test_invalid_email</td>
-          <td class="col-duration">0.58</td>
+          <td class="col-duration">0.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00004_login_with_invalid_senarios.py::TestInvalidLogin::test_invalid_password</td>
+          <td class="col-duration">15.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1031,7 +1031,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00005_forgot_password.py::TestForgotPassword::test_text_of_forgot_password</td>
-          <td class="col-duration">0.02</td>
+          <td class="col-duration">0.04</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1049,7 +1049,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00005_forgot_password.py::TestForgotPassword::test_Click_forgot_password</td>
-          <td class="col-duration">3.09</td>
+          <td class="col-duration">3.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1094,7 +1094,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00005_forgot_password.py::TestForgotPassword::test_enter_the_email_for_reseting_of_password</td>
-          <td class="col-duration">0.10</td>
+          <td class="col-duration">0.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1121,7 +1121,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00005_forgot_password.py::TestForgotPassword::test_click_on_reset_button</td>
-          <td class="col-duration">0.04</td>
+          <td class="col-duration">0.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1139,7 +1139,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00005_forgot_password.py::TestForgotPassword::test_click_on_login_button_to_go_back_to_login_page</td>
-          <td class="col-duration">0.04</td>
+          <td class="col-duration">0.05</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1157,7 +1157,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_email_input_field</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1175,7 +1175,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_email_text</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1202,7 +1202,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_copywrite_footer_text_present</td>
-          <td class="col-duration">0.01</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1220,7 +1220,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_login</td>
-          <td class="col-duration">5.66</td>
+          <td class="col-duration">5.86</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1238,7 +1238,25 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_login_button</td>
-          <td class="col-duration">0.06</td>
+          <td class="col-duration">0.08</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_able_to_login</td>
+          <td class="col-duration">6.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00006_login.py::TestLogin::test_log_out</td>
+          <td class="col-duration">0.18</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1247,7 +1265,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00007_roles_creation.py::TestRoles::test_organization_present_in_sidebar</td>
-          <td class="col-duration">8.35</td>
+          <td class="col-duration">8.45</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1256,7 +1274,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00007_roles_creation.py::TestRoles::test_roles_present_in_sidebar</td>
-          <td class="col-duration">0.29</td>
+          <td class="col-duration">0.35</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1265,43 +1283,19 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">automated/Automation/test_00007_roles_creation.py::TestRoles::test_create_new_role</td>
-          <td class="col-duration">11.56</td>
+          <td class="col-duration">22.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.text-dark&quot;}
-  (Session info: chrome=101.0.4951.54)
-Stacktrace:
-0   chromedriver                        0x000000010105f2c9 chromedriver + 5120713
-1   chromedriver                        0x0000000100fede33 chromedriver + 4656691
-2   chromedriver                        0x0000000100bdd158 chromedriver + 393560
-3   chromedriver                        0x0000000100c11edd chromedriver + 610013
-4   chromedriver                        0x0000000100c12161 chromedriver + 610657
-5   chromedriver                        0x0000000100c06bc7 chromedriver + 564167
-6   chromedriver                        0x0000000100c2f4ad chromedriver + 730285
-7   chromedriver                        0x0000000100c06b05 chromedriver + 563973
-8   chromedriver                        0x0000000100c2f58e chromedriver + 730510
-9   chromedriver                        0x0000000100c41f41 chromedriver + 806721
-10  chromedriver                        0x0000000100c2f373 chromedriver + 729971
-11  chromedriver                        0x0000000100c05609 chromedriver + 558601
-12  chromedriver                        0x0000000100c06635 chromedriver + 562741
-13  chromedriver                        0x0000000101031b1d chromedriver + 4934429
-14  chromedriver                        0x0000000101036295 chromedriver + 4952725
-15  chromedriver                        0x000000010103b3cf chromedriver + 4973519
-16  chromedriver                        0x0000000101036cba chromedriver + 4955322
-17  chromedriver                        0x000000010101137c chromedriver + 4801404
-18  chromedriver                        0x0000000101050c68 chromedriver + 5061736
-19  chromedriver                        0x0000000101050def chromedriver + 5062127
-20  chromedriver                        0x00000001010665e5 chromedriver + 5150181
-21  libsystem_pthread.dylib             0x00007ff81ca214e1 _pthread_start + 125
-22  libsystem_pthread.dylib             0x00007ff81ca1cf6b thread_start + 15
+  (Session info: chrome=101.0.4951.64)
 
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">automated/Automation/test_00008_checking_roles_permission.py::TestCheckRoles::test_parent_button_toggle_children</td>
-          <td class="col-duration">2.13</td>
+          <td class="col-name">automated/Automation/test_00007_roles_creation.py::TestRoles::test_log_out</td>
+          <td class="col-duration">0.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1309,8 +1303,8 @@ Stacktrace:
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">automated/Automation/test_00008_checking_roles_permission.py::TestCheckRoles::test_child_button_off_turns_parent_button_off</td>
-          <td class="col-duration">2.06</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_UM_present_in_sidebar</td>
+          <td class="col-duration">3.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1318,9 +1312,127 @@ Stacktrace:
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">automated/Automation/test_00008_checking_roles_permission.py::TestCheckRoles::test_all_child_button_on_turns_parent_button_on</td>
-          <td class="col-duration">3.05</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_roles_drop</td>
+          <td class="col-duration">0.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_search</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_add_user_button</td>
+          <td class="col-duration">2.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_button_enable</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_adduser_popup</td>
+          <td class="col-duration">7.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_first_name</td>
+          <td class="col-duration">5.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_first_name_enable</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_last_name</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_last_name_enable</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_email_field</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_email_field_enable</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_select_role</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_select_role_enable</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">automated/Automation/test_00011_user_management.py::TestUserManagement::test_add_user</td>
+          <td class="col-duration">0.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>User name added is Charles
+<br/></div></td></tr></tbody></table></body></html>

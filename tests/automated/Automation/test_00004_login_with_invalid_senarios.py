@@ -48,8 +48,8 @@ class TestInvalidLogin:
     # correct email and invalid password
     def test_invalid_password(self, get_data):
         function.driver.refresh()
-        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys(get_data[0])
-        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys(get_data[1])
+        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").send_keys(get_data.email)
+        function.driver.find_element(By.XPATH, "//input[@placeholder='Enter Password']").send_keys(get_data.invalid_password)
         function.driver.find_element(By.XPATH, "//button[@type='submit']").click()
         time.sleep(6)
         function.driver.find_element(By.XPATH, "//input[@placeholder='Enter email']").clear()

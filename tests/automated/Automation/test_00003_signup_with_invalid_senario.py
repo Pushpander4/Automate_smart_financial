@@ -1,27 +1,27 @@
 import time
-
 import pytest
-
 from Automation import function
 from selenium.webdriver.common.by import By
-
-
 function.open_browser()
-function.driver.implicitly_wait(5)
-
 # when no details are entered for sign up . checking warning message
 # (Working)
+
+
 def test_click_signup():
+    function.driver.implicitly_wait(5)
     function.driver.find_element(By.XPATH, "//a[normalize-space()='Signup now']").click()
+
 
 def test_click_button_register():
     function.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(5)
     function.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").click()
 
+
 def test_please_enter_you_first_name():
     please_enter_you_first_name = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your first name']").text
     assert please_enter_you_first_name == 'Please enter your first name'
+
 
 @pytest.mark.skip(reason="This Functionality is noy yet implemented (Please enter your last name)")
 def test_please_enter_your_last_name():
@@ -33,25 +33,31 @@ def test_please_select_a_time_zone():
     please_select_a_time_zone = function.driver.find_element(By.XPATH, "//span[normalize-space()='Please select a time zone']").text
     assert please_select_a_time_zone == 'Please select a time zone'
 
+
 def test_please_enter_your_address():
     please_enter_your_address = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your address']").text
     assert please_enter_your_address == 'Please enter your address'
+
 
 def test_please_enter_your_city():
     please_enter_your_city = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your city']").text
     assert please_enter_your_city == 'Please enter your city'
 
+
 def test_Please_enter_your_state():
     please_enter_your_city = function.driver.find_element(By.XPATH, "//span[normalize-space()='Please select your state']").text
     assert please_enter_your_city == 'Please select your state'
+
 
 def test_Please_enter_your_zip():
     please_enter_your_zip = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your zip']").text
     assert please_enter_your_zip == 'Please enter your zip'
 
+
 def test_Please_enter_a_valid_email():
     please_enter_a_valid_email = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter a valid email']").text
     assert please_enter_a_valid_email == 'Please enter a valid email'
+
 
 def test_Please_enter_your_password():
     Please_enter_your_password = function.driver.find_element(By.XPATH, "//div[normalize-space()='Please enter your password']").text
@@ -61,11 +67,13 @@ def test_Please_enter_your_password():
 # try to  signup with already taken email
 # working
 time.sleep(2)
+
+
 def test_enter_signup_details():
     function.driver.refresh()
     function.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
     function.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys("XYZ")
-    function.driver.find_element(By.XPATH, "//input[@name='phone']").send_keys("2345672347")
+    function.driver.find_element(By.XPATH, "//input[@name='phone_num']").send_keys("2345672347")
     function.driver.find_element(By.XPATH, "//input[@name='address']").send_keys("fgdwbhgbgibgibgjgjdjgad djgndgijjndgjsdn")
     function.driver.find_element(By.XPATH, "//input[@name='city']").send_keys("chicago")
     function.driver.find_element(By.XPATH, "//div[@class='col-xl-6']//div[@class='select2-selection__control css-yk16xz-control']").click()
@@ -80,20 +88,20 @@ def test_enter_signup_details():
     function.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").click()
     time.sleep(2)
 
-def test_email_has_already_been_take():
+def test_email_exists():
     logo = function.driver.find_element(By.XPATH, "//div[@class='text-center p-4']//img")
     function.driver.execute_script("arguments[0].scrollIntoView()", logo)
     time.sleep(2)
-    email_has_already_been_take = function.driver.find_element(By.XPATH, "//div[@role = 'alert']").text
-    assert email_has_already_been_take == 'email has already been taken'
+    account_exists = function.driver.find_element(By.XPATH, "//a[normalize-space()='Click here to log in']").text
+    assert account_exists == 'Click here to log in'
 
 # user should not able to sign up with invalid email ID
 # working
-def test_user_should_not_able_to_log_in_with_in_valid_email():
+def test_user_should_not_able_to_log_in_with_invalid_email():
     function.driver.refresh()
     function.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
     function.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys("XYZ")
-    function.driver.find_element(By.XPATH, "//input[@name='phone']").send_keys("2345672347")
+    function.driver.find_element(By.XPATH, "//input[@name='phone_num']").send_keys("2345672347")
     function.driver.find_element(By.XPATH, "//input[@name='address']").send_keys("fgdwbhgbgibgibgjgjdjgad djgndgijjndgjsdn")
     function.driver.find_element(By.XPATH, "//input[@name='city']").send_keys("Delhi")
     function.driver.find_element(By.XPATH, "//div[@class='col-xl-6']//div[@class='select2-selection__control css-yk16xz-control']").click()

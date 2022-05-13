@@ -2,7 +2,6 @@ import time
 from Automation import function
 from selenium.webdriver.common.by import By
 import pytest
-import random
 
 
 function.open_browser()
@@ -26,15 +25,13 @@ class TestRoles:
         assert text_on_roles == "Roles"
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Roles']").click()
 
-    def test_create_new_role(self):
-        role_number_suffix = random.randint(100000, 999999)
-        role_name = "Team member " + str(role_number_suffix)
+    def test_create_new_role(self, get_data):
         text_create_new_role = function.driver.find_element(By.XPATH,
                                                            "//a[normalize-space()='Create New Role']").text
         assert text_create_new_role == "Create New Role"
         function.driver.find_element(By.XPATH, "//a[normalize-space()='Create New Role']").click()
         # enter the role name
-        function.driver.find_element(By.XPATH, "//input[@name='role_name']").send_keys(role_name)
+        function.driver.find_element(By.XPATH, "//input[@name='role_name']").send_keys(get_data.role_name)
         # select All toggle button (role, campaign ,membership)
         function.driver.find_element(By.ID, "1-switch-item-can_create").click()
         function.driver.find_element(By.ID, "2-switch-group-Campaign").click()
@@ -42,19 +39,20 @@ class TestRoles:
         function.driver.execute_script("arguments[0].scrollIntoView()", save_button)
         time.sleep(1)
         function.driver.find_element(By.ID, "4-switch-group-Membership").click()
+        copy_ss = function.driver.find_element(By.XPATH, "//div[@class='text-sm-end d-none d-sm-block']")
+        function.driver.execute_script("arguments[0].scrollIntoView()", copy_ss)
+
 
         # click save button
+        time.sleep(9)
         function.driver.find_element(By.XPATH, "//button[normalize-space()='Save']").click()
-        time.sleep(5)
-
-        # copy_ss = function.driver.find_element(By.XPATH, "//div[@class='text-sm-end d-none d-sm-block']")
-        # function.driver.execute_script("arguments[0].scrollIntoView()", copy_ss)
+        time.sleep(1)
 
         card_elements = function.driver.find_elements(By.CLASS_NAME, "card")
         for card_elem in card_elements:
             try:
                 title_elem = card_elem.find_element(By.CLASS_NAME, "text-dark")
-                if title_elem.text == role_name:
+                if title_elem.text == get_data.role_name:
                     card_elem.find_element(By.CLASS_NAME, "btn-sfpink").click()
             except Exception as e:
                 print(e)
@@ -75,11 +73,11 @@ class TestRoles:
 #         function.driver.execute_script("arguments[0].scrollIntoView()", save_button)
 #         time.sleep(2)
 #         function.driver.find_element(By.XPATH, "//button[normalize-space()='Save']").click()
-#         time.sleep(4)
-#
-#     def test_log_out(self):
-#         function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
-#         function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
+        time.sleep(5)
+
+    def test_log_out(self):
+        function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
+        function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
 
 
 

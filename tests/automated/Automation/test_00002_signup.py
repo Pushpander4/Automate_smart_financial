@@ -35,7 +35,7 @@ class TestSignup:
         assert Enter_last_name == "Last Name"
 
     def testEnter_phone_number_enable(self):
-        function.driver.find_element(By.XPATH, "//input[@name='phone']").is_enabled()
+        function.driver.find_element(By.XPATH, "//input[@name='phone_num']").is_enabled()
 
     def testEnter_phone_number(self):
         Enter_last_name = function.driver.find_element(By.XPATH, "//label[normalize-space()='Phone']").text
@@ -139,9 +139,11 @@ class TestSignup:
         time.sleep(4)
 
     def test_click_on_login_button_to_go_back_to_login_page(self):
-        back_to_login_text = function.driver.find_element(By.XPATH, "//a[normalize-space()='Login']")
+        back_to_login_text = function.driver.find_element(By.LINK_TEXT, "Login")
         function.driver.execute_script("arguments[0].scrollIntoView()", back_to_login_text)
-        time.sleep(3)
+        time.sleep(8)
         function.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
+        time.sleep(3)
         wait = WebDriverWait(function.driver, 10)
-        wait.until(EC.element_to_be_clickable(back_to_login_text)).click()
+        wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Login"))).click()
+        # function.driver.find_element(By.XPATH, "//a[@class='font-weight-medium text-sfblue']").click()

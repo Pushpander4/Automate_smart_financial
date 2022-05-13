@@ -7,7 +7,7 @@ parent_handel = driver.current_window_handle
 
 def open_browser():
     driver.maximize_window()
-    driver.get("https://xenodochial-stonebraker-d239bd.netlify.app/login")
+    driver.get("https://singular-swan-4802c7.netlify.app/")
     time.sleep(3)
 
 
