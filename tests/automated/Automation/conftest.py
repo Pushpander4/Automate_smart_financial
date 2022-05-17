@@ -32,7 +32,3 @@ def get_data():
         "first_name": fake.unique.first_name(),
         "last_name": fake.unique.last_name(),
     })
-
-
-
-

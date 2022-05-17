@@ -8,4 +8,3 @@ def test_T1_open_browser():
 
 
     function.open_browser()
-

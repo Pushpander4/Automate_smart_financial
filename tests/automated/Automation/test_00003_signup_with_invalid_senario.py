@@ -142,4 +142,3 @@ def test_not_able_to_sign_up_with_invalid_zip():
     function.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12")
     function.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
     function.driver.back()
-

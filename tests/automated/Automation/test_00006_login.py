@@ -65,4 +65,3 @@ class TestLogin:
     def test_log_out(self):
         function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
         function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
-
