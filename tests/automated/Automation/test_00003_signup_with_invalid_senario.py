@@ -91,7 +91,7 @@ def test_enter_signup_details():
 def test_email_exists():
     logo = function.driver.find_element(By.XPATH, "//div[@class='text-center p-4']//img")
     function.driver.execute_script("arguments[0].scrollIntoView()", logo)
-    time.sleep(2)
+    time.sleep(5)
     account_exists = function.driver.find_element(By.XPATH, "//a[normalize-space()='Click here to log in']").text
     assert account_exists == 'Click here to log in'
 
@@ -142,3 +142,4 @@ def test_not_able_to_sign_up_with_invalid_zip():
     function.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12")
     function.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys("ABC")
     function.driver.back()
+

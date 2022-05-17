@@ -136,8 +136,7 @@ class TestSignup:
     def test_click_on_login_button_to_go_back_to_login_page(self):
         back_to_login_text = function.driver.find_element(By.LINK_TEXT, "Login")
         function.driver.execute_script("arguments[0].scrollIntoView()", back_to_login_text)
-        time.sleep(8)
         function.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
-        time.sleep(3)
+        time.sleep(4)
         wait = WebDriverWait(function.driver, 10)
         wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Login"))).click()

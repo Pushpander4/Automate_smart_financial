@@ -2,6 +2,7 @@ import time
 import pytest
 from Automation import function
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 
 function.open_browser()
 
@@ -55,10 +56,10 @@ class TestLogin:
 
     # @pytest.mark.skip
     def test_able_to_login(self):
-        time.sleep(4)
+        function.driver.implicitly_wait(5)
         profile_page_url = function.driver.current_url
         assert (profile_page_url == "https://singular-swan-4802c7.netlify.app/profile")
-        time.sleep(2)
+        time.sleep(5)
 
 
     def test_log_out(self):
