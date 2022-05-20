@@ -54,7 +54,7 @@ class TestLogin:
     def test_login_button(self):
         function.driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
-    # @pytest.mark.skip
+    @pytest.mark.skip
     def test_able_to_login(self):
         function.driver.implicitly_wait(5)
         profile_page_url = function.driver.current_url

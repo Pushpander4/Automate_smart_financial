@@ -1,12 +1,12 @@
 # from selenium.webdriver.support.ui import Select
 import time
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from Automation import function
 from selenium.webdriver.common.by import By
 import pytest
 
-
+@pytest.mark.usefixtures("get_data")
 class TestSignup:
 
     def test_signup_enable_or_not(self):
@@ -133,10 +133,29 @@ class TestSignup:
         t_2022_Smart_Financial = function.driver.find_element(By.XPATH,"//p[normalize-space()='© 2022 SmartFinancial']").text
         assert t_2022_Smart_Financial == "© 2022 SmartFinancial"
 
-    def test_click_on_login_button_to_go_back_to_login_page(self):
-        back_to_login_text = function.driver.find_element(By.LINK_TEXT, "Login")
-        function.driver.execute_script("arguments[0].scrollIntoView()", back_to_login_text)
-        function.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
-        time.sleep(4)
-        wait = WebDriverWait(function.driver, 10)
-        wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Login"))).click()
+    def test_user_able_to_signup(self, get_data ):
+        function.driver.refresh()
+        function.driver.find_element(By.XPATH, "//input[@name='first_name']").send_keys(get_data.first_name)
+        function.driver.find_element(By.XPATH, "//input[@name='last_name']").send_keys(get_data.last_name)
+        function.driver.find_element(By.XPATH, "//input[@name='phone_num']").send_keys("2345672347")
+        function.driver.find_element(By.XPATH, "//input[@name='address']").send_keys(get_data.address)
+        function.driver.find_element(By.XPATH, "//input[@name='city']").send_keys(get_data.city)
+        function.driver.find_element(By.XPATH,
+                                     "//div[@class='col-xl-6']//div[@class='select2-selection__control css-yk16xz-control']").click()
+        function.driver.find_element(By.ID, "react-select-2-option-0-5").click()
+        time.sleep(6)
+        function.driver.find_element(By.XPATH, "//div[@class='col-xl-3']//div[@class='select2-selection__value-"
+                                               "container select2-selection__value-container--has-value css-1hwfws3']").click()
+        function.driver.find_element(By.ID, "react-select-3-option-0-1").click()
+        function.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        function.driver.find_element(By.XPATH, "//input[@name='zip_code']").send_keys("12345")
+        function.driver.find_element(By.XPATH, "//input[@id='email']").send_keys(get_data.email)
+        function.driver.find_element(By.XPATH, "//input[@name='password']").send_keys(get_data.self_password)
+        function.driver.find_element(By.XPATH, "//button[normalize-space()='Create New Account']").click()
+        wait = WebDriverWait(function.driver, 8)
+        wait.until(ec.visibility_of_element_located((By.XPATH, "//div[@role='alert']")))
+        registration_alert = function.driver.find_element(By.XPATH, "//div[@role='alert']").text
+        assert (registration_alert == 'Registration successful, please login to proceed')
+
+
+

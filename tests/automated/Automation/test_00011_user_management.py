@@ -88,15 +88,17 @@ class TestUserManagement:
 
 
         #TODO:select roles
-        function.driver.find_element(By.XPATH, "//button[normalize-space()='Send Invite']").click()
+        #function.driver.find_element(By.XPATH, "//button[normalize-space()='Send Invite']").click()
 
     @pytest.mark.skip(reason="This function is skiped because test_add_user is skiped(dependent)")
     def test_edit_user(self):
         function.driver.implicitly_wait(5)
         function.driver.find_element(By.CLASS_NAME, "mdi mdi-pencil font-size-18").click()
-        time.sleep(2)
+        time.sleep(5)
 
 
     def test_log_out(self):
+        function.driver.refresh()
         function.driver.find_element(By.XPATH, "//img[@alt='Header Avatar']").click()
         function.driver.find_element(By.XPATH, "//a[@href='/logout']").click()
+

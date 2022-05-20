@@ -31,4 +31,6 @@ def get_data():
         "role_name": "Team member" + str(random.randint(100000, 999999)),
         "first_name": fake.unique.first_name(),
         "last_name": fake.unique.last_name(),
+        "address": fake.unique.address(),
+        "city": fake.unique.city(),
     })
